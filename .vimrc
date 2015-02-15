@@ -588,7 +588,7 @@ set undofile
 "imap <leader>From ⇐
 "imap <leader>fromto ↔
 "imap <leader>Fromto ⇔
-imap <leader>ge ≥
+"imap <leader>ge ≥
 "imap <leader>glub ⊓
 "imap <leader>iff ⇔
 "imap <leader>implies ⇒
@@ -608,7 +608,7 @@ imap <leader>ge ≥
 "imap <leader>ldown ⇃
 "imap <leader>leadsto ⇝
 "imap <leader>~> ⇝
-imap <leader>le ≤
+"imap <leader>le ≤
 "imap <leader>lift ⌊⌋<left>
 "imap <leader>floor ⌊⌋<left>
 "imap <leader>llangle ⟪
@@ -718,9 +718,9 @@ imap <leader>le ≤
 "imap <leader>thus ∴
 "imap <leader>times ×
 "imap <leader>* ×
-imap <leader>to →
-imap <leader>- →
-imap <C-_> →
+"imap <leader>to →
+"imap <leader>- →
+"imap <C-_> →
 "imap <leader>To ⇒
 "imap <leader>= ⇒
 "imap <leader>top ⊤
@@ -955,10 +955,10 @@ autocmd FileType cpp        nmap <F9> <ESC>:w<CR><ESC>:make<CR><ESC>:!./%<<CR>
 autocmd FileType c          nmap <F9> <ESC>:w<CR><ESC>:!clang % -o %<<CR><ESC>:!./%<<CR>
 autocmd FileType haskell    nmap <F9> <ESC>:w<CR><ESC>:make<CR><ESC>:!./%<<CR>
 
-noremap <S-f5>  <ESC>:w<CR><ESC>:!python3 /home/igorjan/206round/cfsubmit.py %<CR>
-noremap <S-f6>  <ESC>:w<CR><ESC>:!python3 /home/igorjan/206round/cfsubmit.py %< 5<CR>
-noremap <C-B>   <ESC>:w<CR><ESC>:!python3 /home/igorjan/206round/cfsubmit.py %<CR>
-noremap <C-S-B> <ESC>:w<CR><ESC>:!python3 /home/igorjan/206round/cfsubmit.py %< 5<CR>
+noremap <S-f5>  <ESC>:w<CR><ESC>:!/home/igorjan/206round/cfsubmit.py %<CR>
+noremap <S-f6>  <ESC>:w<CR><ESC>:!/home/igorjan/206round/cfsubmit.py %< 5<CR>
+noremap <C-B>   <ESC>:w<CR><ESC>:!/home/igorjan/206round/cfsubmit.py %<CR>
+noremap <C-S-B> <ESC>:w<CR><ESC>:!/home/igorjan/206round/cfsubmit.py %< 5<CR>
 
 "nmap <F7> <ESC>:w<CR><ESC>:!/usr/local/pgsql/bin/psql -U igorjan -d ctd -a -f %<CR>
 "imap <F7> <ESC>:w<CR><ESC>:!/usr/local/pgsql/bin/psql -U igorjan -d ctd -a -f %<CR>
@@ -1004,8 +1004,11 @@ imap <leader>el elohw(
 imap <leader>mne min_element(
 imap <leader>mxe max_element(
 imap <leader>b begin()
-imap <leader>e end()
+imap <leader>en end()
 imap <leader>f first
 imap <leader>s second
 imap <leader>we writeln_range(
 imap <leader>au auto
+
+set timeoutlen=2000
+
