@@ -992,23 +992,22 @@ let g:EclimJavaSearchSingleResult = 'tabnew'
 autocmd FileType cpp  nnoremap <C-E> <ESC>:YcmCompleter GoToDefinitionElseDeclaration<CR>
 autocmd FileType java nnoremap <C-E> <ESC>:JavaSearch<CR>
 
+set timeoutlen=2000
+
 imap <leader>{ {<CR><CR>}<ESC>k$i
-imap <leader>re readln(
-imap <leader>wr writeln(
+imap <leader>re readln();<ESC>hi
+imap <leader>wr writeln();<ESC>hi
 imap <leader>S System.out.println();<ESC>hi
-imap <leader><leader>esc <ESC>
+imap <leader>esc <ESC>
 imap <leader>str struct<CR>{<CR><TAB><CR>};<ESC>k$i
 imap <leader>v vector<
 imap <leader>wh whole(
 imap <leader>el elohw(
 imap <leader>mne min_element(
 imap <leader>mxe max_element(
-imap <leader>b begin()
-imap <leader>en end()
+imap <leader>b begin(), 
+imap <leader>en end(), 
 imap <leader>f first
 imap <leader>s second
 imap <leader>we writeln_range(
-imap <leader>au auto
-
-set timeoutlen=2000
-
+imap <leader>[] []()<CR>{<CR>return<CR>};<ESC>kkk$i
