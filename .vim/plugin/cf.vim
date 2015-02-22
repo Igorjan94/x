@@ -10,29 +10,28 @@ let s:keepcpo            = &cpo
 set cpo&vim
 " ------------------------------------------------------------------------------
 
-let g:CodeForcesContestId = 0
-let g:CodeForcesFrom = 1
-let g:CodeForcesCount = 20
-let g:CodeForcesLang = "ru"
-let g:CodeForcesDomain = "ru"
+let s:CodeForcesFrom           = 1
+let g:CodeForcesContestId      = 0
+let g:CodeForcesCount          = 50
+let g:CodeForcesLang           = "ru"
+let g:CodeForcesDomain         = "ru"
 let g:CodeForcesCountOfSubmits = 5
 let g:CodeForcesUpdateInterval = 2
 
-if !hasmapto('<Plug>AppFunction')
-  map  <unique> <leader>igor <Plug>AppFunction
-endif
+function! CodeForcesNextStandings()
+    let s:CodeForcesFrom = s:CodeForcesFrom + g:CodeForcesCount
+    call CodeForcesStandings(g:CodeForcesContestId)
+endfunction
+command! -nargs=0 CodeForcesNextStandings call CodeForcesNextStandings()
 
-map <silent> <unique> <script> <Plug>AppFunction
- \ :set lz<CR>:call <SID>AppFunction()<CR>:set nolz<CR>
-
-fun! s:AppFunction()
-  echom "okey"
-  call s:InternalAppFunction("lol")
-endfun
-
-fun! s:InternalAppFunction(f)
-    echom a:f
-endfun
+function! CodeForcesPrevStandings()
+    let s:CodeForcesFrom = s:CodeForcesFrom - g:CodeForcesCount
+    if s:CodeForcesFrom < 0
+        let s:CodeForcesFrom = 1
+    endif
+    call CodeForcesStandings(g:CodeForcesContestId)
+endfunction
+command! -nargs=0 CodeForcesPrevStandings call CodeForcesPrevStandings()
 
 function! CodeForcesColor()
     highlight Red     ctermfg=red 
@@ -44,10 +43,13 @@ function! CodeForcesColor()
     highlight Unrated ctermfg=white
 
     let x = matchadd("Green", '+[0-9]')
+    let x = matchadd("Green", '+[0-9][0-9]')
     let x = matchadd("Green", ' [0-9][0-9][0-9]')
     let x = matchadd("Green", ' [0-9][0-9][0-9][0-9]')
     let x = matchadd("Green", ' [0-9][0-9][0-9][0-9][0-9]')
     let x = matchadd("Red", '-[0-9]')
+    let x = matchadd("Red", '-[0-9][0-9]')
+
 python << EOF
 import vim
 users = open('codeforces.users', 'r')
@@ -57,6 +59,7 @@ for user in users:
     vim.command(s)
 EOF
 endfunction
+command! -nargs=0 CodeForcesColor call CodeForcesColor()
 
 function! CodeForcesSubmission(...)
 python << EOF
@@ -84,6 +87,7 @@ function! CodeForcesUserSubmissions(...)
 python << EOF
 import vim
 import requests
+import time
 from time import sleep
 
 username = vim.eval("g:CodeForcesUsername")
@@ -98,7 +102,7 @@ while True:
     try:
         data = requests.get("http://codeforces.ru/api/user.status?handle=" + username + "&from=1&count=" + str(countOfSubmits)).json()['result']
     except:
-        sleep(updateInterval)
+        vim.command('sleep ' + str(updateInterval))
         continue
     print("last submits")
     for s in reversed(data):
@@ -107,9 +111,9 @@ while True:
         except:
             print('IN QUEUE')
     sys.stdout.flush()
-    if s['verdict'] != 'TESTING':
+    if data[0]['verdict'] != 'TESTING':
         break
-    sleep(updateInterval)
+    vim.command('sleep ' + str(updateInterval))
 
 EOF
 endfunction
@@ -117,6 +121,7 @@ endfunction
 function! CodeForcesSubmit(...)
 python << EOF
 import vim
+import time  
 import requests
 
 filename = vim.eval("expand(\'%:r\')").upper()
@@ -125,11 +130,11 @@ extension = vim.eval("expand(\'%:e\')").lower()
 
 #TODO: parsing of directory or filename to find CodeForcesContestId
 
-fullPath = vim.eval("expand(\'%:p\')")
+fullPath   = vim.eval("expand(\'%:p\')")
 contest_id = vim.eval("g:CodeForcesContestId")
-cf_domain = vim.eval("g:CodeForcesDomain")
+cf_domain  = vim.eval("g:CodeForcesDomain")
 csrf_token = vim.eval("g:CodeForcesToken")
-x_user = vim.eval("g:CodeForcesXUser")
+x_user     = vim.eval("g:CodeForcesXUser")
 
 contest_id = directory # ONLY FOR ME NOW
 
@@ -173,6 +178,7 @@ print(r)
 if r.status_code == requests.codes.ok:
     print("Solution is successfully sent. Current time is " + time.strftime("%H:%M:%S"))
 EOF
+call CodeForcesUserSubmissions()
 endfunction
 
 function! CodeForcesStandings(...)
@@ -188,11 +194,10 @@ if vim.eval("g:CodeForcesContestId") == 0:
 else:
     api = "http://codeforces." + vim.eval("g:CodeForcesLang") + "/api/"
 
-    url = api + 'contest.standings?contestId=' + vim.eval("g:CodeForcesContestId") + '&from=' + vim.eval("g:CodeForcesFrom") + '&count=' + vim.eval("g:CodeForcesCount")
-
+    url = api + 'contest.standings?contestId=' + vim.eval("g:CodeForcesContestId") + '&from=' + vim.eval("s:CodeForcesFrom") + '&count=' + vim.eval("g:CodeForcesCount")
     try:
-#    vim.command('badd codeforces.standings')
-#    vim.command('bn')
+        if vim.eval("expand(\'%:e\')").lower() != 'standings':
+            vim.command('tabnew codeforces.standings')
         del vim.current.buffer[:]
         x = requests.get(url).json()
         if x['status'] != 'OK':
@@ -219,18 +224,17 @@ else:
                 s = ' ' + str(y['rank']) + ' | ' + y['party']['members'][0]['handle'] + ' | ' + hacks + '|' + str(int(y['points']))
                 for pr in y['problemResults']:
                     s += ' | '
-                if pr['points'] == 0.0:
-                    if pr['rejectedAttemptCount'] != 0:
-                        s += '-' + str(pr['rejectedAttemptCount'])
-                else:
-                    s += str(int(pr['points']))
-            vim.current.buffer.append(s)
-        vim.command("3,$EasyAlign *| {'a':'c'}")
-
+                    if pr['points'] == 0.0:
+                        if pr['rejectedAttemptCount'] != 0:
+                            s += '-' + str(pr['rejectedAttemptCount'])
+                    else:
+                        s += str(int(pr['points']))
+                vim.current.buffer.append(s)
+            vim.command("3,$EasyAlign *| {'a':'c'}")
     except Exception, e:
         print e
-
 EOF
+call CodeForcesColor()
 endfunction
 
 command! -nargs=* CodeForcesStandings call CodeForcesStandings('<args>')
