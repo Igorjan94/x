@@ -14,6 +14,9 @@ let g:CodeForcesContestId = 0
 let g:CodeForcesFrom = 1
 let g:CodeForcesCount = 20
 let g:CodeForcesLang = "ru"
+let g:CodeForcesDomain = "ru"
+let g:CodeForcesCountOfSubmits = 5
+let g:CodeForcesUpdateInterval = 2
 
 if !hasmapto('<Plug>AppFunction')
   map  <unique> <leader>igor <Plug>AppFunction
@@ -70,8 +73,6 @@ if col >= 0 and tasks[col] != '|':
     if i != -1:
         submission = i
         handle = handle.replace(' ', '')
-        open('lol', 'w').write(handle + '! ' + str(submission))
-        vim.command('tabnew lol')
 EOF
 endfunction
 
@@ -79,10 +80,98 @@ function! CodeForcesSetRound(id)
     let g:CodeForcesContestId = id
 endfunction
 
+function! CodeForcesUserSubmissions(...)
+python << EOF
+import vim
+import requests
+from time import sleep
+
+username = vim.eval("g:CodeForcesUsername")
+updateInterval = vim.eval("g:CodeForcesUpdateInterval")
+countOfSubmits = vim.eval("g:CodeForcesCountOfSubmits")
+
+def formatString(s):
+    return str(s['problem']['contestId']) + s['problem']['index'] + " " + \
+        '{:>25}'.format(s['verdict'] + "(" + str(s['passedTestCount'] + 1) + ") ") + str(s['timeConsumedMillis']) + " ms"
+
+while True:
+    try:
+        data = requests.get("http://codeforces.ru/api/user.status?handle=" + username + "&from=1&count=" + str(countOfSubmits)).json()['result']
+    except:
+        sleep(updateInterval)
+        continue
+    print("last submits")
+    for s in reversed(data):
+        try:
+            print(formatString(s))
+        except:
+            print('IN QUEUE')
+    sys.stdout.flush()
+    if s['verdict'] != 'TESTING':
+        break
+    sleep(updateInterval)
+
+EOF
+endfunction
+
 function! CodeForcesSubmit(...)
 python << EOF
 import vim
+import requests
 
+filename = vim.eval("expand(\'%:r\')").upper()
+directory = vim.eval("expand(\'%:p:h:t\')")
+extension = vim.eval("expand(\'%:e\')").lower()
+
+#TODO: parsing of directory or filename to find CodeForcesContestId
+
+fullPath = vim.eval("expand(\'%:p\')")
+contest_id = vim.eval("g:CodeForcesContestId")
+cf_domain = vim.eval("g:CodeForcesDomain")
+csrf_token = vim.eval("g:CodeForcesToken")
+x_user = vim.eval("g:CodeForcesXUser")
+
+contest_id = directory # ONLY FOR ME NOW
+
+ext_id          =  {
+    "cpp":   "16",
+    "cs":    "9",
+    "c":     "10",
+    "hs":    "12",
+    "java":  "36",
+    "py":    "41",
+    "py2":   "40",
+    "py3":   "41",
+    "d":     "28",
+    "go":    "32",
+    "ml":    "19",
+    "pas":   "4",
+    "dpr":   "3",
+    "pl":    "13",
+    "php":   "6",
+    "rb":    "8",
+    "scala": "20",
+    "js":    "34"
+}
+
+parts = {
+        "csrf_token":            csrf_token,
+        "action":                "submitSolutionFormSubmitted",
+        "submittedProblemIndex": filename,
+        "source":                open(fullPath, "rb"),
+        "programTypeId":         ext_id[extension],
+        "sourceFile":            "",
+        "_tta":                  "222"
+}
+
+print("you' ve submitted " + contest_id + filename + extension)
+r = requests.post("http://codeforces." + cf_domain + "/contest/" + contest_id + "/problem/" + filename,
+              params = {"csrf_token": csrf_token},
+              files = parts,
+              cookies = {"X-User": x_user})
+print(r)
+if r.status_code == requests.codes.ok:
+    print("Solution is successfully sent. Current time is " + time.strftime("%H:%M:%S"))
 EOF
 endfunction
 
