@@ -1,15 +1,16 @@
-" Author: Igorjan94, Igorjan94@{mail.ru, gmail.com, yandex.ru}, https://github.com/Igorjan94
+" Author: Igor Kolobov, Igorjan94, Igorjan94@{mail.ru, gmail.com, yandex.ru}, https://github.com/Igorjan94, http://codeforces.ru/profile/Igorjan94
 
 " ------------------------------------------------------------------------------
-" Exit when your app has already been loaded (or "compatible" mode set)
+"{{{
 if exists("g:loaded_cf") || &cp
   finish
 endif
-let g:loaded_cf          = 0.0 " your version number
+let g:loaded_cf          = 0.0
 let s:keepcpo            = &cpo
 set cpo&vim
+"}}}
 " ------------------------------------------------------------------------------
-
+"{{{
 let s:CodeForcesFrom           = 1
 let g:CodeForcesContestId      = 0
 let g:CodeForcesCount          = 50
@@ -17,14 +18,16 @@ let g:CodeForcesLang           = "ru"
 let g:CodeForcesDomain         = "ru"
 let g:CodeForcesCountOfSubmits = 5
 let g:CodeForcesUpdateInterval = 2
+"}}}           
 
-function! CodeForcesNextStandings()
+function! CodeForcesNextStandings() "{{{
     let s:CodeForcesFrom = s:CodeForcesFrom + g:CodeForcesCount
     call CodeForcesStandings(g:CodeForcesContestId)
 endfunction
 command! -nargs=0 CodeForcesNextStandings call CodeForcesNextStandings()
+"}}}
 
-function! CodeForcesPrevStandings()
+function! CodeForcesPrevStandings() "{{{
     let s:CodeForcesFrom = s:CodeForcesFrom - g:CodeForcesCount
     if s:CodeForcesFrom < 0
         let s:CodeForcesFrom = 1
@@ -32,8 +35,24 @@ function! CodeForcesPrevStandings()
     call CodeForcesStandings(g:CodeForcesContestId)
 endfunction
 command! -nargs=0 CodeForcesPrevStandings call CodeForcesPrevStandings()
+"}}}
 
-function! CodeForcesColor()
+function! CodeForcesPageStandings(page) "{{{
+    if a:page >= 1
+        let s:CodeForcesFrom = (a:page - 1) * g:CodeForcesCount + 1
+        call CodeForcesStandings(g:CodeForcesContestId)
+    endif
+endfunction
+command! -nargs=1 CodeForcesPageStandings call CodeForcesPageStandings(<args>)
+"}}}
+
+function! CodeForcesSetRound(id) "{{{
+    let g:CodeForcesContestId = a:id
+endfunction
+command! -nargs=1 CodeForcesSetRound call CodeForcesSetRound(<args>)
+"}}}
+
+function! CodeForcesColor() "{{{
     highlight Red     ctermfg=red 
     highlight Yellow  ctermfg=yellow
     highlight Purple  ctermfg=magenta
@@ -49,7 +68,6 @@ function! CodeForcesColor()
     let x = matchadd("Green", ' [0-9][0-9][0-9][0-9][0-9]')
     let x = matchadd("Red", '-[0-9]')
     let x = matchadd("Red", '-[0-9][0-9]')
-
 python << EOF
 import vim
 users = open('codeforces.users', 'r')
@@ -60,9 +78,11 @@ for user in users:
 EOF
 endfunction
 command! -nargs=0 CodeForcesColor call CodeForcesColor()
+"}}}
 
-function! CodeForcesSubmission(...)
+function! CodeForcesSubmission() "{{{
 python << EOF
+import requests
 import vim
 (row, col) = vim.current.window.cursor
 [n, handle, hacks, score, tasks] = vim.current.buffer[row - 1].split('|', 4)
@@ -78,19 +98,17 @@ if col >= 0 and tasks[col] != '|':
         handle = handle.replace(' ', '')
 EOF
 endfunction
+command! -nargs=0 CodeForcesSubmission call CodeForcesSubmission()
+"}}}
 
-function! CodeForcesSetRound(id)
-    let g:CodeForcesContestId = id
-endfunction
-
-function! CodeForcesUserSubmissions(...)
+function! CodeForcesUserSubmissions() "{{{
 python << EOF
 import vim
 import requests
 import time
 from time import sleep
 
-username = vim.eval("g:CodeForcesUsername")
+username       = vim.eval("g:CodeForcesUsername")
 updateInterval = vim.eval("g:CodeForcesUpdateInterval")
 countOfSubmits = vim.eval("g:CodeForcesCountOfSubmits")
 
@@ -114,29 +132,24 @@ while True:
     if data[0]['verdict'] != 'TESTING':
         break
     vim.command('sleep ' + str(updateInterval))
-
 EOF
 endfunction
+command! -nargs=0 CodeForcesUserSubmissions call CodeForcesUserSubmissions()
+"}}}
 
-function! CodeForcesSubmit(...)
+function! CodeForcesSubmitIndexed(contestId, problemIndex) "{{{
 python << EOF
 import vim
 import time  
 import requests
 
-filename = vim.eval("expand(\'%:r\')").upper()
-directory = vim.eval("expand(\'%:p:h:t\')")
-extension = vim.eval("expand(\'%:e\')").lower()
-
-#TODO: parsing of directory or filename to find CodeForcesContestId
-
+contest_id = vim.eval("a:contestId")
+filename   = vim.eval("a:problemIndex")
+extension  = vim.eval("expand(\'%:e\')").lower()
 fullPath   = vim.eval("expand(\'%:p\')")
-contest_id = vim.eval("g:CodeForcesContestId")
 cf_domain  = vim.eval("g:CodeForcesDomain")
 csrf_token = vim.eval("g:CodeForcesToken")
 x_user     = vim.eval("g:CodeForcesXUser")
-
-contest_id = directory # ONLY FOR ME NOW
 
 ext_id          =  {
     "cpp":   "16",
@@ -158,30 +171,46 @@ ext_id          =  {
     "scala": "20",
     "js":    "34"
 }
-
-parts = {
-        "csrf_token":            csrf_token,
-        "action":                "submitSolutionFormSubmitted",
-        "submittedProblemIndex": filename,
-        "source":                open(fullPath, "rb"),
-        "programTypeId":         ext_id[extension],
-        "sourceFile":            "",
-        "_tta":                  "222"
-}
-
-print("you' ve submitted " + contest_id + filename + extension)
-r = requests.post("http://codeforces." + cf_domain + "/contest/" + contest_id + "/problem/" + filename,
-              params = {"csrf_token": csrf_token},
-              files = parts,
-              cookies = {"X-User": x_user})
-print(r)
-if r.status_code == requests.codes.ok:
-    print("Solution is successfully sent. Current time is " + time.strftime("%H:%M:%S"))
+if not extension in ext_id.keys():
+    print("I don't know extension ." + extension + " :(")
+else:
+    parts = {
+            "csrf_token":            csrf_token,
+            "action":                "submitSolutionFormSubmitted",
+            "submittedProblemIndex": filename,
+            "source":                open(fullPath, "rb"),
+            "programTypeId":         ext_id[extension],
+            "sourceFile":            "",
+            "_tta":                  "222"
+    }
+    print("you are submitting  " + str(contest_id) + filename + '.' + extension)
+    r = requests.post("http://codeforces." + cf_domain + "/contest/" + contest_id + "/problem/" + filename,
+        params  = {"csrf_token": csrf_token},
+        files   = parts,
+        cookies = {"X-User": x_user})
+    print(r)
+    if r.status_code == requests.codes.ok:
+        print("Solution is successfully sent. Current time is " + time.strftime("%H:%M:%S"))
 EOF
 call CodeForcesUserSubmissions()
 endfunction
+command! -nargs=+ CodeForcesSubmitIndexed call CodeForcesSubmitIndexed(<f-args>)
+"}}}
 
-function! CodeForcesStandings(...)
+function! CodeForcesSubmit() "{{{
+"contest_id = vim.eval("g:CodeForcesContestId")
+let filename = expand('%:r')
+let directory = expand('%:p:h:t')
+
+"TODO: parsing of directory or filename to find CodeForcesContestId and ProblemIndex
+"supported format: some/long/path/513/B2.cpp
+
+call CodeForcesSubmitIndexed(directory, filename)
+endfunction
+command! -nargs=0 CodeForcesSubmit call CodeForcesSubmit()
+"}}}
+
+function! CodeForcesStandings(...) "{{{
 python << EOF
 import vim
 import requests
@@ -193,7 +222,6 @@ if vim.eval("g:CodeForcesContestId") == 0:
     vim.command("echom \"CodeForcesContestId is not set. Add it in .vimrc or just call CodeForcesStandings <CodeForcesContestId>\"")
 else:
     api = "http://codeforces." + vim.eval("g:CodeForcesLang") + "/api/"
-
     url = api + 'contest.standings?contestId=' + vim.eval("g:CodeForcesContestId") + '&from=' + vim.eval("s:CodeForcesFrom") + '&count=' + vim.eval("g:CodeForcesCount")
     try:
         if vim.eval("expand(\'%:e\')").lower() != 'standings':
@@ -236,8 +264,19 @@ else:
 EOF
 call CodeForcesColor()
 endfunction
-
 command! -nargs=* CodeForcesStandings call CodeForcesStandings('<args>')
+"}}}
+
+function! CodeForcesLoadTask(index) "{{{
+python << EOF
+import vim
+import requests
+import html2text
+
+EOF
+endfunction
+command! -nargs=1 CodeForcesLoadTask call CodeForcesLoadTask(<args>)
+"}}}
 
 " ------------------------------------------------------------------------------
 let &cpo= s:keepcpo
