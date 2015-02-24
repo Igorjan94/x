@@ -87,15 +87,33 @@ import vim
 (row, col) = vim.current.window.cursor
 [n, handle, hacks, score, tasks] = vim.current.buffer[row - 1].split('|', 4)
 col -= len(n + handle + hacks + score) + 4
-if col >= 0 and tasks[col] != '|':
+if col >= 0 and tasks[col] != '|' and row > 2:
     submissions = tasks.split('|')
     i = 0
     while col > len(submissions[i]):
         col -= len(submissions[i]) + 1
         i += 1
     if i != -1:
-        submission = i
         handle = handle.replace(' ', '')
+        index = vim.current.buffer[1].split('|', 4)[4].split('|')[i].split('(')[0].replace(' ', '')
+        count = 20
+        i = 1
+        submissionId = -1
+        submissionExt = ''
+        while True:
+            submissions = requests.get('http://codeforces.ru/api/contest.status?contestId=' + vim.eval('g:CodeForcesContestId') + '&handle=' + handle +
+                '&from=' + i + '&count=' + count).json():
+            for submission in submissions['result']:
+                if submission['index'] == index:
+                    submissionId = submission['id']
+                    break
+            if len(submissions) == 0 or submissionId != -1:
+                break
+            i += count
+        if submissionId != -1:
+            vim.command('tabnew ' + handle + 'index' + submissionExt)
+            del vim.current.buffer[:]
+            vim.current.buffer.append(submissionCode)
 EOF
 endfunction
 command! -nargs=0 CodeForcesSubmission call CodeForcesSubmission()
@@ -259,6 +277,7 @@ else:
                         s += str(int(pr['points']))
                 vim.current.buffer.append(s)
             vim.command("3,$EasyAlign *| {'a':'c'}")
+            del vim.current.buffer[0]
     except Exception, e:
         print e
 EOF
@@ -271,11 +290,21 @@ function! CodeForcesLoadTask(index) "{{{
 python << EOF
 import vim
 import requests
-import html2text
+#import html2text
 
+index = vim.eval("a:index").upper()
+vim.command('tabnew ' + index + '.problem')
+#del vim.current.buffer[:]
+#vim.current.buffer.append(index + '\r' + html2text.html2text(''.join(open("problem.txt", 'r').readlines())).split(index)[1].split('[Codeforces]')[0])
+#vim.current.buffer.append(index + '\r' + html2text.html2text('http://codeforces.ru/problemset/problem/' + vim.eval('g:CodeForcesContestId') + '/' + index).split(index)[1].split('[Codeforces]')[0])
+del vim.current.buffer[1:4]
+del vim.current.buffer[2:5]
+del vim.current.buffer[3:12]
 EOF
+:%s/    \n/\r/g
+:%s/\n\n\n/\r/g
 endfunction
-command! -nargs=1 CodeForcesLoadTask call CodeForcesLoadTask(<args>)
+command! -nargs=1 CodeForcesLoadTask call CodeForcesLoadTask(<q-args>)
 "}}}
 
 " ------------------------------------------------------------------------------
