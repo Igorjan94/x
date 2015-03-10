@@ -7,42 +7,43 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 filetype plugin indent on
 
-Bundle            'vim-scripts/dbext.vim'
+Bundle         'Igorjan94/codeforces.vim'
+"Bundle            'vim-scripts/dbext.vim'
 Bundle                   'kien/ctrlp.vim'
 Bundle               'Shougo/vimproc.vim'
 Bundle                'majutsushi/tagbar'
 Bundle           'Valloric/YouCompleteMe'
 Bundle             'scrooloose/syntastic'
-Bundle                 'travitch/hasksyn'
-Bundle               'tpope/vim-surround'
+"Bundle                 'travitch/hasksyn'
+"Bundle               'tpope/vim-surround'
 Bundle                    'gmarik/vundle'
-Bundle                'vim-scripts/a.vim'
-Bundle         'scrooloose/nerdcommenter'
+"Bundle                'vim-scripts/a.vim'
+"Bundle         'scrooloose/nerdcommenter'
 Bundle              'scrooloose/nerdtree'
-Bundle                'eagletmt/neco-ghc'
-Bundle              'eagletmt/ghcmod-vim'
+"Bundle                'eagletmt/neco-ghc'
+"Bundle              'eagletmt/ghcmod-vim'
 Bundle                  'mbbill/undotree'
 Bundle                'bling/vim-airline'
-Bundle               'tpope/vim-fugitive'
+"Bundle               'tpope/vim-fugitive'
 Bundle          'Lokaltog/vim-easymotion'
 Bundle 'altercation/vim-colors-solarized'
 Bundle       'dhruvasagar/vim-table-mode'
-Bundle      'Twinside/vim-haskellConceal'
-Bundle              'Twinside/vim-hoogle'
-Bundle                   'mattn/gist-vim'
-Bundle                 'mattn/webapi-vim'
-Bundle                    'bitc/lushtags'
+"Bundle      'Twinside/vim-haskellConceal'
+"Bundle              'Twinside/vim-hoogle'
+"Bundle                   'mattn/gist-vim'
+"Bundle                 'mattn/webapi-vim'
+"Bundle                    'bitc/lushtags'
 Bundle             'itchyny/calendar.vim'
-Bundle            'itchyny/thumbnail.vim'
-Bundle    'xuhdev/vim-latex-live-preview'
-Bundle         'LaTeX-Box-Team/LaTeX-Box'
+"Bundle            'itchyny/thumbnail.vim'
+"Bundle    'xuhdev/vim-latex-live-preview'
+"Bundle         'LaTeX-Box-Team/LaTeX-Box'
 Bundle          'junegunn/vim-easy-align'
 Bundle           'airblade/vim-gitgutter'
-Bundle               'takac/vim-hardtime'
-Bundle             'vim-scripts/Tabmerge'
+"Bundle               'takac/vim-hardtime'
+"Bundle             'vim-scripts/Tabmerge'
 Bundle       'powerman/vim-plugin-ruscmd'
 Bundle     'kien/rainbow_parentheses.vim'
-Bundle                   'wting/rust.vim'
+"Bundle                   'wting/rust.vim'
 Bundle          'idris-hackers/idris-vim'
 
 set nocp
@@ -105,14 +106,10 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-let g:airline_enable_branch=1
-let g:airline_enable_syntastic=1
+let g:airline#extensions#syntastic#enabled = 1
 let g:airline_theme='dark'
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
-let g:airline_linecolumn_prefix = '¶ '
-let g:airline_branch_prefix = '⎇ '
-let g:airline_paste_symbol = 'ρ'
 let g:airline_detect_modified=1
 let g:airline_detect_paste=1
 
@@ -149,14 +146,6 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \ }
 
-
-autocmd BufRead,BufNewFile ~/.xmonad/* call s:add_xmonad_path()
-function! s:add_xmonad_path()
-  if !exists('b:ghcmod_ghc_options')
-    let b:ghcmod_ghc_options = []
-  endif
-  call add(b:ghcmod_ghc_options, '-i' . expand('~/.xmonad/lib'))
-endfunction
 
 
 "set listchars=tab:  
@@ -220,6 +209,7 @@ map cb <ESC>:cp<CR>
 " yank to clipboard 
 map <leader>y "+y
 map <leader>y "+y
+map <C-A> ggvG$"+y''
 map <leader>m :call SaveAndInsertType()<CR>
     func! SaveAndInsertType()
         exec ":w"
@@ -955,10 +945,6 @@ autocmd FileType cpp        nmap <F9> <ESC>:w<CR><ESC>:make<CR><ESC>:!./%<<CR>
 autocmd FileType c          nmap <F9> <ESC>:w<CR><ESC>:!clang % -o %<<CR><ESC>:!./%<<CR>
 autocmd FileType haskell    nmap <F9> <ESC>:w<CR><ESC>:make<CR><ESC>:!./%<<CR>
 
-noremap <S-f5>  <ESC>:w<CR><ESC>:!/home/igorjan/206round/cfsubmit.py %<CR>
-noremap <S-f6>  <ESC>:w<CR><ESC>:!/home/igorjan/206round/cfsubmit.py %< 5<CR>
-noremap <C-B>   <ESC>:w<CR><ESC>:!/home/igorjan/206round/cfsubmit.py %<CR>
-noremap <C-S-B> <ESC>:w<CR><ESC>:!/home/igorjan/206round/cfsubmit.py %< 5<CR>
 
 "nmap <F7> <ESC>:w<CR><ESC>:!/usr/local/pgsql/bin/psql -U igorjan -d ctd -a -f %<CR>
 "imap <F7> <ESC>:w<CR><ESC>:!/usr/local/pgsql/bin/psql -U igorjan -d ctd -a -f %<CR>
@@ -989,6 +975,25 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 let g:EclimJavaSearchSingleResult = 'tabnew'
+
+let g:undotree_SetFocusWhenToggle = 1
+
+let g:CodeForcesXUser = 'cccb51221be8f35e972e26066e3c9beeeb1e5cab0830f8ecd3eb6aa6509b3c3c43b2126a3c2bf027'
+let g:CodeForcesToken = '16C9DDFCA3F482F20442D1FCB8BD48A1'
+let g:CodeForcesUsername = 'Igorjan94'
+let g:CodeForcesCount = 40
+let g:CodeForcesContestId = 522
+let g:CodeForcesShowUnofficial = '1'
+let g:CodeForcesCommandLoadTask = 'vsplit'
+let g:CodeForcesContestFormat = '/index'
+let g:CodeForcesOutput = 'output'
+let g:CodeForcesInput = 'input'
+let g:CodeForcesTemplate = '/home/igorjan/206round/main.cpp'
+
+noremap <leader>vv <ESC>:CodeForces
+noremap <C-B>   <ESC>:w<CR><ESC>:CodeForcesUserSubmissions<CR>
+noremap <C-S-B> <ESC>:w<CR><ESC>:CodeForcesSubmit<CR>
+
 autocmd FileType cpp  nnoremap <C-E> <ESC>:YcmCompleter GoToDefinitionElseDeclaration<CR>
 autocmd FileType java nnoremap <C-E> <ESC>:JavaSearch<CR>
 
@@ -1008,6 +1013,18 @@ imap <leader>mxe max_element(
 imap <leader>b begin(), 
 imap <leader>en end(), 
 imap <leader>f first
-imap <leader>s second
+imap <leader>se second
+imap <leader>so sort(whole(
 imap <leader>we writeln_range(
 imap <leader>[] []()<CR>{<CR>return<CR>};<ESC>kkk$i
+
+map <C-I><C-G><C-O><C-R> <ESC>:r /home/igorjan/206round/main.cpp<CR>
+
+set foldenable
+set foldmethod=marker
+
+map <leader>cfo <ESC>:call CodeForces#CodeForcesOpenContest()<CR>
+
+map <leader>sz 25<C-W>>
+
+set matchpairs+=<:>
