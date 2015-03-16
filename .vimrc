@@ -18,7 +18,7 @@ Bundle             'scrooloose/syntastic'
 "Bundle               'tpope/vim-surround'
 Bundle                    'gmarik/vundle'
 "Bundle                'vim-scripts/a.vim'
-"Bundle         'scrooloose/nerdcommenter'
+Bundle         'scrooloose/nerdcommenter'
 Bundle              'scrooloose/nerdtree'
 "Bundle                'eagletmt/neco-ghc'
 "Bundle              'eagletmt/ghcmod-vim'
@@ -56,11 +56,9 @@ set cindent
 
 "TODO disable in vimrc
 
-"for p in ["syntastic", "YouCompleteMe", "tagbar", "taglist", "vimproc", 'vimshell'] | exec 'set rtp+=~/.nix-profile/vim-plugins/'.p | endfor
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
-"filetype on
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 command WQ wq
@@ -73,14 +71,6 @@ autocmd vimenter * cd %:p:h
 set nocompatible
 set hidden
 filetype indent plugin on | syn on
-fun ActivateAddons()
-    let g:vim_addon_manager = {}
-    let g:vim_addon_manager.log_to_buf =1
-    set runtimepath+=~/.vim/vim-addons/vim-addon-manager
-    call vam#ActivateAddons(["vim-addon-nix"])
-endf
-"call ActivateAddons()
-""vim-surround", "hasksyn", "vim-surround", "a.vim", "nerdcommenter", "nerdtree", "neco-ghc", "ghcmod-vim"
 
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
@@ -93,13 +83,8 @@ map  N <Plug>(easymotion-prev)
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 
-let g:gist_clip_command = 'xclip -selection clipboard'
-let g:gist_detect_filetype = 1
-let g:gist_use_password_in_gitconfig = 1
-
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
-let g:necoghc_enable_detailed_browse = 1
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -131,7 +116,6 @@ let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 let g:ycm_path_to_python_interpreter = '/usr/bin/python2'
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-"autocmd FileType c let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/c/.ycm_extra_conf.py'
 let g:ycm_semantic_triggers =  {
   \   'c' : ['->', '.'],
   \   'cpp' : ['->', '.', '::'],
@@ -147,9 +131,6 @@ let g:ycm_semantic_triggers =  {
   \ }
 
 
-
-"set listchars=tab:  
-"set list
 set fencs=utf-8,cp1251,koi8-r,ucs-2,cp866
 au FileType qf call AdjustWindowHeight(3, 10)
 function! AdjustWindowHeight(minheight, maxheight)
@@ -186,14 +167,13 @@ map <leader>Q :let @+ = system("pastebinit " . " -f " . &filetype . " " . expand
 "map <C-E> <Esc>:tabedit %<.h<CR>
 vnoremap p "_dP
 nnoremap <C-u> :UndotreeToggle<CR>
-imap <F5> <Esc> :tabprev<CR>
+imap <F5> <Esc> :tabprev<CR><leader>cd
+map <F5> :tabprev<CR><leader>cd
 nmap <leader>w :w!<cr>
 map <F2> <Esc>:w !sudo tee %<CR>
 imap <F2> <Esc>:w<CR>
-imap <F5> <Esc> :tabprev<CR>
-map <F5> :tabprev<CR>
-imap <F6> <Esc> :tabnext<CR>
-map <F6> :tabnext <CR>
+imap <F6> <Esc> :tabnext<CR><leader>cd
+map <F6> :tabnext <CR><leader>cd
 function! GAC()
     call inputsave()
     let commit = input('Commit message: ')
@@ -204,17 +184,12 @@ endfunction
 let Tlist_Exit_OnlyWindow = 1
 " put from clipboard
 nmap <leader>p "+p
+nmap <leader>P "+P
 map cn <ESC>:cn<CR>
 map cb <ESC>:cp<CR>
 " yank to clipboard 
 map <leader>y "+y
-map <leader>y "+y
 map <C-A> ggvG$"+y''
-map <leader>m :call SaveAndInsertType()<CR>
-    func! SaveAndInsertType()
-        exec ":w"
-        exec "GhcModTypeInsert"
-    endfunc
 set wildmenu
 set wcm=<Tab>
 menu Exit.quit     :quit<CR>
@@ -982,7 +957,7 @@ let g:CodeForcesXUser = 'cccb51221be8f35e972e26066e3c9beeeb1e5cab0830f8ecd3eb6aa
 let g:CodeForcesToken = '16C9DDFCA3F482F20442D1FCB8BD48A1'
 let g:CodeForcesUsername = 'Igorjan94'
 let g:CodeForcesCount = 40
-let g:CodeForcesContestId = 522
+let g:CodeForcesContestId = 523
 let g:CodeForcesShowUnofficial = '1'
 let g:CodeForcesCommandLoadTask = 'vsplit'
 let g:CodeForcesContestFormat = '/index'
@@ -1028,3 +1003,6 @@ map <leader>cfo <ESC>:call CodeForces#CodeForcesOpenContest()<CR>
 map <leader>sz 25<C-W>>
 
 set matchpairs+=<:>
+
+map <C-Right> w
+map <C-Left> b
