@@ -875,21 +875,16 @@ endfunction
 command! -nargs=0 TODOS call SearchForTODO()
 
 "MYYYYYYYYYY=======================================================================================================
-autocmd FileType cpp call CppMake()
-function! CppMake()
-    if filereadable("Makefile")
-        set makeprg=make\ -s
-    else
-        if filereadable("makefile")
-            set makeprg=make\ -s
-        else
-            set makeprg=clang++\ -O2\ -std=c++11\ -o\ %<\ %
-        endif
-    endif
-endfunction
-
-autocmd FileType java       set makeprg=javac\ %
-autocmd FileType haskell    set makeprg=ghc\ -o\ %<\ %
+if filereadable("Makefile")
+    set makeprg=make\ -s
+else
+    autocmd FileType java       set makeprg=javac\ %
+    autocmd FileType haskell    set makeprg=ghc\ -o\ %<\ %
+    autocmd FileType python     set makeprg=python3\ %
+    autocmd FileType perl       set makeprg=perl\ %
+    autocmd FileType c          set makeprg=clang\ -o\ %<\ %
+    autocmd FileType cpp        set makeprg=clang++\ -O2\ -std=c++11\ -I/home/igorjan/206round/staff\ -o\ %<\ %
+endif
 
                             nmap <F8> <ESC>:w<CR><ESC>:!./%<CR>
                             imap <F8> <ESC>:w<CR><ESC>:!./%<CR>
@@ -903,23 +898,11 @@ autocmd FileType python     nmap <F8> <ESC>:w<CR><ESC>:!python3 %<CR>
 autocmd FileType python     imap <F8> <ESC>:w<CR><ESC>:!python3 %<CR>
 
 
-autocmd FileType cpp        noremap <C-F9> <ESC>:w<CR><ESC>:make<CR>
-autocmd FileType java       noremap <C-F9> <ESC>:w<CR><ESC>:make<CR>
+imap <C-F9> <ESC>:w<CR><ESC>:make<CR>
+nmap <C-F9> <ESC>:w<CR><ESC>:make<CR>
 
-autocmd FileType python     imap <F9> <ESC>:w<CR><ESC>:!python3 %<CR>
-autocmd FileType perl       imap <F9> <ESC>:w<CR><ESC>:!perl %<CR>
-autocmd FileType java       imap <F9> <ESC>:w<CR><ESC>:make<CR><ESC>:!java %<<CR>
-autocmd FileType cpp        imap <F9> <ESC>:w<CR><ESC>:make<CR><ESC>:!./%<<CR>
-autocmd FileType c          imap <F9> <ESC>:w<CR><ESC>:!clang % -o %<<CR><ESC>:!./%<<CR>
-autocmd FileType haskell    imap <F9> <ESC>:w<CR><ESC>:make<CR><ESC>:!./%<<CR>
-
-autocmd FileType python     nmap <F9> <ESC>:w<CR><ESC>:!python3 %<CR>
-autocmd FileType perl       nmap <F9> <ESC>:w<CR><ESC>:!perl %<CR>
-autocmd FileType java       nmap <F9> <ESC>:w<CR><ESC>:make<CR><ESC>:!java %<<CR>
-autocmd FileType cpp        nmap <F9> <ESC>:w<CR><ESC>:make<CR><ESC>:!./%<<CR>
-autocmd FileType c          nmap <F9> <ESC>:w<CR><ESC>:!clang % -o %<<CR><ESC>:!./%<<CR>
-autocmd FileType haskell    nmap <F9> <ESC>:w<CR><ESC>:make<CR><ESC>:!./%<<CR>
-
+imap <F9> <ESC>:w<CR><ESC>:silent make<CR>:call feedkeys("\<F8>")<CR>
+nmap <F9> <ESC>:w<CR><ESC>:silent make<CR>:call feedkeys("\<F8>")<CR>
 
 "nmap <F7> <ESC>:w<CR><ESC>:!/usr/local/pgsql/bin/psql -U igorjan -d ctd -a -f %<CR>
 "imap <F7> <ESC>:w<CR><ESC>:!/usr/local/pgsql/bin/psql -U igorjan -d ctd -a -f %<CR>
@@ -928,11 +911,9 @@ autocmd FileType cpp        nmap <F7> <ESC>:w<CR>:!clang++ -std=c++11 -E %<CR>
 
 autocmd FileType cpp    imap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --break-blocks --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
 autocmd FileType java   imap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --break-blocks --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
-autocmd BufRead *.hs    imap <C-f> <Esc>:w<CR><Esc>:%!stylish-haskell<CR><CR>
 
 autocmd FileType cpp    nmap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --break-blocks --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
 autocmd FileType java   nmap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --break-blocks --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
-autocmd BufRead *.hs    nmap <C-f> <Esc>:w<CR><Esc>:%!stylish-haskell<CR><CR>
 
 " Ctrl-Space for completions. Heck Yeah!¬
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
@@ -957,7 +938,7 @@ let g:CodeForcesXUser = 'cccb51221be8f35e972e26066e3c9beeeb1e5cab0830f8ecd3eb6aa
 let g:CodeForcesToken = '16C9DDFCA3F482F20442D1FCB8BD48A1'
 let g:CodeForcesUsername = 'Igorjan94'
 let g:CodeForcesCount = 40
-let g:CodeForcesContestId = 523
+let g:CodeForcesContestId = 524
 let g:CodeForcesShowUnofficial = '1'
 let g:CodeForcesCommandLoadTask = 'vsplit'
 let g:CodeForcesContestFormat = '/index'
