@@ -880,8 +880,7 @@ if filereadable("Makefile")
 else
     autocmd FileType java       set makeprg=javac\ %
     autocmd FileType haskell    set makeprg=ghc\ -o\ %<\ %
-    autocmd FileType python     set makeprg=python3\ %
-    autocmd FileType perl       set makeprg=perl\ %
+    autocmd FileType python     set makeprg=echo\ Нажмите\ ENTER\ или\ введите\ команду\ для\ продолжения
     autocmd FileType c          set makeprg=clang\ -o\ %<\ %
     autocmd FileType cpp        set makeprg=clang++\ -O2\ -std=c++11\ -I/home/igorjan/206round/staff\ -o\ %<\ %
 endif
