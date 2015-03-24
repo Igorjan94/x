@@ -183,13 +183,15 @@ function! GAC()
 endfunction
 let Tlist_Exit_OnlyWindow = 1
 " put from clipboard
+
 nmap <leader>p "+p
 nmap <leader>P "+P
+map <leader>y "+y
+map <C-A> ggvG$"+y''
+
 map cn <ESC>:cn<CR>
 map cb <ESC>:cp<CR>
 " yank to clipboard 
-map <leader>y "+y
-map <C-A> ggvG$"+y''
 set wildmenu
 set wcm=<Tab>
 menu Exit.quit     :quit<CR>
@@ -986,3 +988,8 @@ set matchpairs+=<:>
 
 map <C-Right> w
 map <C-Left> b
+
+nmap <A-Down> :m+<CR>
+nmap <A-Up>   :m-2<CR>
+vmap <A-Down> :m'>+<CR>'<my'>mzgv'yo'z
+vmap <A-Up>   :m'<-2<CR>'>my'<mzgv'yo'z
