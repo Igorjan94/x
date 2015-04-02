@@ -1,0 +1,23 @@
+version 0.1:
+
+* Added user-defined command for actions (watch standings, load problem/submission)
+* Tested work with 10k users in colors. Unsucsessfully. 1k -- ~OK
+* ICPC standings in usual format, command standings (e.g. contest with id 522, VKCup)
+* Room standings
+* Some minor fixes
+
+version 0.2:
+
+* Parsing of contest
+* Running samples
+* Correct html-parsing of problem statement, submission, friends
+* Contest list
+* Standings with '?' while systests, color of points Blue if contest isn't finished
+* Added gym support
+* Added (untested) support of not public contests /*added cookies in html-requests, I think it should work. Also don't know if api with cookies give me standings for "closed" round, let's wait for VkCup2*/
+* Refactoring
+
+version 0.3:
+
+* Added flag needTests to problem parsing
+* ICPC -> (hacks->penalty)
