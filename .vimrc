@@ -183,15 +183,13 @@ function! GAC()
 endfunction
 let Tlist_Exit_OnlyWindow = 1
 " put from clipboard
-
 nmap <leader>p "+p
 nmap <leader>P "+P
-map <leader>y "+y
-map <C-A> ggvG$"+y''
-
 map cn <ESC>:cn<CR>
 map cb <ESC>:cp<CR>
 " yank to clipboard 
+map <leader>y "+y
+map <C-A> ggvG$"+y''
 set wildmenu
 set wcm=<Tab>
 menu Exit.quit     :quit<CR>
@@ -936,10 +934,10 @@ let g:EclimJavaSearchSingleResult = 'tabnew'
 let g:undotree_SetFocusWhenToggle = 1
 
 let g:CodeForcesXUser = 'cccb51221be8f35e972e26066e3c9beeeb1e5cab0830f8ecd3eb6aa6509b3c3c43b2126a3c2bf027'
-let g:CodeForcesToken = '16C9DDFCA3F482F20442D1FCB8BD48A1'
+let g:CodeForcesToken = '2C80141B1512719211DF182889882F40'
 let g:CodeForcesUsername = 'Igorjan94'
-let g:CodeForcesCount = 40
-let g:CodeForcesContestId = 524
+let g:CodeForcesCount = 42
+let g:CodeForcesContestId = 530
 let g:CodeForcesShowUnofficial = '1'
 let g:CodeForcesCommandLoadTask = 'vsplit'
 let g:CodeForcesContestFormat = '/index'
@@ -988,8 +986,3 @@ set matchpairs+=<:>
 
 map <C-Right> w
 map <C-Left> b
-
-nmap <A-Down> :m+<CR>
-nmap <A-Up>   :m-2<CR>
-vmap <A-Down> :m'>+<CR>'<my'>mzgv'yo'z
-vmap <A-Up>   :m'<-2<CR>'>my'<mzgv'yo'z
