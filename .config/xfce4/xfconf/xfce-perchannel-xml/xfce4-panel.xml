@@ -11,7 +11,6 @@
       <property name="size" type="uint" value="30"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
-        <value type="int" value="7"/>
         <value type="int" value="3"/>
         <value type="int" value="15"/>
         <value type="int" value="4"/>
@@ -21,10 +20,10 @@
         <value type="int" value="5"/>
         <value type="int" value="2"/>
       </property>
-      <property name="autohide" type="bool" value="false"/>
       <property name="disable-struts" type="bool" value="false"/>
       <property name="mode" type="uint" value="0"/>
       <property name="length-adjust" type="bool" value="true"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -63,7 +62,7 @@
     <property name="plugin-5" type="string" value="clock">
       <property name="mode" type="uint" value="2"/>
       <property name="show-frame" type="bool" value="false"/>
-      <property name="digital-format" type="string" value="%F%n%R"/>
+      <property name="digital-format" type="string" value="%d %b %Y, %a, %R"/>
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
@@ -92,11 +91,6 @@
       </property>
     </property>
     <property name="plugin-20" type="string" value="power-manager-plugin"/>
-    <property name="plugin-7" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="14229983721.desktop"/>
-      </property>
-    </property>
     <property name="plugin-8" type="string" value="xkb-plugin"/>
   </property>
 </channel>

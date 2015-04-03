@@ -14,7 +14,7 @@
   <property name="hidden-bookmarks" type="array">
     <value type="string" value="file:///home/igorjan/documents/3_course"/>
   </property>
-  <property name="last-show-hidden" type="bool" value="true"/>
+  <property name="last-show-hidden" type="bool" value="false"/>
   <property name="last-menubar-visible" type="bool" value="false"/>
   <property name="last-side-pane" type="string" value="ThunarShortcutsPane"/>
 </channel>
