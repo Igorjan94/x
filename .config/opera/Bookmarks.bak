@@ -1,0 +1,84 @@
+{
+   "checksum": "6bcc7d179bc7ec8912953160dd9ea148",
+   "roots": {
+      "bookmark_bar": {
+         "children": [  ],
+         "date_added": "13064791006874369",
+         "date_modified": "0",
+         "id": "1",
+         "name": "Bookmarks Bar",
+         "type": "folder"
+      },
+      "custom_root": {
+         "shared": {
+            "children": [  ],
+            "date_added": "13064791007130870",
+            "date_modified": "0",
+            "id": "6",
+            "name": "Shared Bookmarks",
+            "type": "folder"
+         },
+         "unsorted": {
+            "children": [  ],
+            "date_added": "13064791007130767",
+            "date_modified": "0",
+            "id": "4",
+            "name": "Unsorted Bookmarks",
+            "type": "folder"
+         },
+         "userRoot": {
+            "children": [ {
+               "children": [  ],
+               "date_added": "13064791009565401",
+               "date_modified": "13064791009565402",
+               "id": "7",
+               "name": "_reading_list_",
+               "type": "folder"
+            }, {
+               "children": [  ],
+               "date_added": "13064791009567792",
+               "date_modified": "13064791009567793",
+               "id": "8",
+               "name": "_shopping_",
+               "type": "folder"
+            }, {
+               "children": [  ],
+               "date_added": "13064791009569160",
+               "date_modified": "13064791009569160",
+               "id": "9",
+               "name": "_travel_",
+               "type": "folder"
+            }, {
+               "children": [  ],
+               "date_added": "13064791009570091",
+               "date_modified": "13064791009570091",
+               "id": "10",
+               "name": "_videos_",
+               "type": "folder"
+            } ],
+            "date_added": "13064791007130792",
+            "date_modified": "0",
+            "id": "5",
+            "name": "My Folders",
+            "type": "folder"
+         }
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13064791006874380",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Other Bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13064791006874383",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Mobile Bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

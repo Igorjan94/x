@@ -1,0 +1,30 @@
+{
+   "checksum": "cb8f7355fe6f112b1ef7d26286fcd027",
+   "roots": {
+      "bookmark_bar": {
+         "children": [  ],
+         "date_added": "13075315583464806",
+         "date_modified": "13076174307859266",
+         "id": "1",
+         "name": "Панель закладок",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13075315583464817",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Другие закладки",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13075315583464818",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Закладки на мобильном",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

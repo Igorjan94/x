@@ -1,0 +1,100 @@
+{
+   "checksum": "3923c457e330ae2f5162a196c5ef043f",
+   "roots": {
+      "bookmark_bar": {
+         "children": [  ],
+         "date_added": "13064791006874369",
+         "date_modified": "0",
+         "id": "1",
+         "name": "Панель закладок",
+         "type": "folder"
+      },
+      "custom_root": {
+         "shared": {
+            "children": [  ],
+            "date_added": "13064791007130870",
+            "date_modified": "0",
+            "id": "6",
+            "name": "Общие закладки",
+            "type": "folder"
+         },
+         "speedDial": {
+            "children": [  ],
+            "date_added": "13074704420623458",
+            "date_modified": "0",
+            "id": "11",
+            "name": "",
+            "type": "folder"
+         },
+         "trash": {
+            "children": [  ],
+            "date_added": "13074704420623459",
+            "date_modified": "0",
+            "id": "12",
+            "name": "",
+            "type": "folder"
+         },
+         "unsorted": {
+            "children": [  ],
+            "date_added": "13064791007130767",
+            "date_modified": "0",
+            "id": "4",
+            "name": "Несортированные закладки",
+            "type": "folder"
+         },
+         "userRoot": {
+            "children": [ {
+               "children": [  ],
+               "date_added": "13064791009565401",
+               "date_modified": "13064791009565402",
+               "id": "7",
+               "name": "_reading_list_",
+               "type": "folder"
+            }, {
+               "children": [  ],
+               "date_added": "13064791009567792",
+               "date_modified": "13064791009567793",
+               "id": "8",
+               "name": "_shopping_",
+               "type": "folder"
+            }, {
+               "children": [  ],
+               "date_added": "13064791009569160",
+               "date_modified": "13064791009569160",
+               "id": "9",
+               "name": "_travel_",
+               "type": "folder"
+            }, {
+               "children": [  ],
+               "date_added": "13064791009570091",
+               "date_modified": "13064791009570091",
+               "id": "10",
+               "name": "_videos_",
+               "type": "folder"
+            } ],
+            "date_added": "13064791007130792",
+            "date_modified": "0",
+            "id": "5",
+            "name": "Мои папки",
+            "type": "folder"
+         }
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13064791006874380",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Другие закладки",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13064791006874383",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Закладки на мобильном",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

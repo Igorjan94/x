@@ -1,0 +1,23 @@
+{
+   "bookmarks": {
+      "stash_imported": true
+   },
+   "hardware_acceleration_mode_previous": true,
+   "last_version": [ 28, 0, 1750, 51, 0 ],
+   "location": {
+      "country": "ru",
+      "country_from_server": "RU",
+      "timestamp": "1441864442600000000",
+      "tries": 1
+   },
+   "shutdown": {
+      "num_processes": 3,
+      "num_processes_slow": 1,
+      "type": 1
+   },
+   "update": {
+      "components": {
+         "next_check_interval": "14400"
+      }
+   }
+}

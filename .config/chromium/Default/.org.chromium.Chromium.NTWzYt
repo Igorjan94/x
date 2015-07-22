@@ -1,0 +1,1679 @@
+{
+   "autofill": {
+      "negative_upload_rate": 1.0,
+      "positive_upload_rate": 1.0
+   },
+   "bookmark_bar": {
+      "show_on_all_tabs": false
+   },
+   "browser": {
+      "clear_lso_data_enabled": true,
+      "custom_chrome_frame": true,
+      "last_known_google_url": "https://www.google.ru/",
+      "pepper_flash_settings_enabled": true,
+      "show_home_button": false,
+      "window_placement": {
+         "bottom": 1024,
+         "left": 266,
+         "maximized": true,
+         "right": 1245,
+         "top": 31,
+         "work_area_bottom": 1024,
+         "work_area_left": 0,
+         "work_area_right": 1280,
+         "work_area_top": 31
+      }
+   },
+   "countryid_at_install": -1,
+   "data_reduction": {
+      "daily_original_length": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "23011946", "9651797", "9075574", "0", "0", "0", "0", "6608523", "5988437", "2120237", "4136889", "0", "0", "0", "537649" ],
+      "daily_original_length_via_data_reduction_proxy": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_original_length_with_data_reduction_proxy_enabled": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_received_length": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "23011946", "9651797", "9075574", "0", "0", "0", "0", "6608523", "5988437", "2120237", "4136889", "0", "0", "0", "537649" ],
+      "daily_received_length_https_with_data_reduction_proxy_enabled": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_received_length_long_bypass_with_data_reduction_proxy_enabled": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_received_length_short_bypass_with_data_reduction_proxy_enabled": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_received_length_unknown_with_data_reduction_proxy_enabled": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_received_length_via_data_reduction_proxy": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_received_length_with_data_reduction_proxy_enabled": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "last_update_date": "13075862400000000"
+   },
+   "default_apps_install_state": 3,
+   "dns_prefetching": {
+      "host_referral_list": [ 2, [ "https://limg.imgsmail.ru/", [ "https://limg.imgsmail.ru/", 3.5946609999999994 ] ], [ "https://mail.ru/", [ "https://bs.yandex.ru/", 2.2733802, "https://img.imgsmail.ru/", 3.2643407999999994, "https://limg.imgsmail.ru/", 4.585621599999999, "https://mail.radar.imgsmail.ru/", 2.2733802, "https://ok.ru/", 2.2733802, "https://r.mradx.net/", 10.861705399999996, "https://r3.mail.ru/", 2.2733802, "https://rs.mail.ru/", 8.549463999999997, "https://stat.radar.imgsmail.ru/", 3.2643407999999994, "https://top-fwz1.mail.ru/", 2.6037003999999997 ] ], [ "https://www.google.ru/", [ "https://ssl.gstatic.com/", 2.2733802, "https://www.google.ru/", 2.6037003999999997 ] ] ],
+      "startup_list": [ 1, "http://www.google-analytics.com/", "https://googleads.g.doubleclick.net/", "https://mail.radar.imgsmail.ru/", "https://mail.ru/", "https://mailru-checker-api.e.mail.ru/", "https://portal.mail.ru/", "https://rs.mail.ru/", "https://ssl.google-analytics.com/", "https://ssl.gstatic.com/", "https://www.google.ru/" ]
+   },
+   "download": {
+      "directory_upgrade": true
+   },
+   "enhanced_bookmarks_enabled": 0,
+   "extensions": {
+      "alerts": {
+         "initialized": true
+      },
+      "autoupdate": {
+         "last_check": "13075912567094815",
+         "next_check": "13075928872211520"
+      },
+      "chrome_url_overrides": {
+         "bookmarks": [ "chrome-extension://eemcgdkfndhakfknompkggombfjjjeno/main.html" ]
+      },
+      "last_chrome_version": "42.0.2311.135",
+      "settings": {
+         "ahfgeienlihckogmohjhadlkjgocpleb": {
+            "active_permissions": {
+               "api": [ "management", "system.display", "system.storage", "webstorePrivate", "system.cpu", "system.memory", "system.network" ],
+               "manifest_permissions": [  ]
+            },
+            "app_launcher_ordinal": "t",
+            "commands": {
+
+            },
+            "content_settings": [  ],
+            "creation_flags": 1,
+            "events": [  ],
+            "from_bookmark": false,
+            "from_webstore": false,
+            "incognito_content_settings": [  ],
+            "incognito_preferences": {
+
+            },
+            "install_time": "13057808305380722",
+            "location": 5,
+            "manifest": {
+               "app": {
+                  "launch": {
+                     "web_url": "https://chrome.google.com/webstore"
+                  },
+                  "urls": [ "https://chrome.google.com/webstore" ]
+               },
+               "description": "Discover great apps, games, extensions and themes for Google Chrome.",
+               "icons": {
+                  "128": "webstore_icon_128.png",
+                  "16": "webstore_icon_16.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtl3tO0osjuzRsf6xtD2SKxPlTfuoy7AWoObysitBPvH5fE1NaAA1/2JkPWkVDhdLBWLaIBPYeXbzlHp3y4Vv/4XG+aN5qFE3z+1RU/NqkzVYHtIpVScf3DjTYtKVL66mzVGijSoAIwbFCC3LpGdaoe6Q1rSRDp76wR6jjFzsYwQIDAQAB",
+               "name": "Web Store",
+               "permissions": [ "webstorePrivate", "management", "system.cpu", "system.display", "system.memory", "system.network", "system.storage" ],
+               "version": "0.2"
+            },
+            "page_ordinal": "n",
+            "path": "/usr/lib/chromium/resources/web_store",
+            "preferences": {
+
+            },
+            "regular_only_preferences": {
+
+            },
+            "state": 1,
+            "was_installed_by_default": false,
+            "was_installed_by_oem": false
+         },
+         "bepbmhgboaologfdajaanbcjmnhjmhfn": {
+            "disable_reasons": 1,
+            "state": 0
+         },
+         "cfhdojbkjhnklbpkdaibdccddilifddb": {
+            "active_permissions": {
+               "api": [ "contextMenus", "notifications", "tabs", "unlimitedStorage", "webNavigation", "webRequest", "webRequestBlocking" ],
+               "explicit_host": [ "http://*/*", "https://*/*" ],
+               "manifest_permissions": [  ],
+               "scriptable_host": [ "http://*/*", "https://*/*" ]
+            },
+            "commands": {
+
+            },
+            "content_settings": [  ],
+            "creation_flags": 9,
+            "events": [  ],
+            "extension_can_script_all_urls": true,
+            "from_bookmark": false,
+            "from_webstore": true,
+            "granted_permissions": {
+               "api": [ "contextMenus", "notifications", "tabs", "unlimitedStorage", "webNavigation", "webRequest", "webRequestBlocking" ],
+               "explicit_host": [ "http://*/*", "https://*/*" ],
+               "manifest_permissions": [  ],
+               "scriptable_host": [ "http://*/*", "https://*/*" ]
+            },
+            "incognito_content_settings": [  ],
+            "incognito_preferences": {
+
+            },
+            "initial_keybindings_set": true,
+            "install_time": "13074697866541857",
+            "lastpingday": "13075898440786871",
+            "location": 1,
+            "manifest": {
+               "background": {
+                  "scripts": [ "ext/common.js", "ext/background.js", "lib/compat.js", "lib/info.js", "lib/io.js", "lib/adblockplus.js", "lib/punycode.js", "lib/publicSuffixList.js", "lib/sha1.js", "lib/jsbn.js", "lib/rsa.js", "webrequest.js", "messageResponder.js", "popupBlocker.js", "background.js" ]
+               },
+               "browser_action": {
+                  "default_icon": {
+                     "19": "icons/abp-19.png",
+                     "38": "icons/abp-38.png"
+                  },
+                  "default_popup": "popup.html",
+                  "default_title": "Adblock Plus"
+               },
+               "content_scripts": [ {
+                  "all_frames": true,
+                  "js": [ "ext/common.js", "ext/content.js", "include.preload.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ],
+                  "run_at": "document_start"
+               }, {
+                  "all_frames": true,
+                  "js": [ "include.postload.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ],
+                  "run_at": "document_end"
+               } ],
+               "current_locale": "ru",
+               "default_locale": "en_US",
+               "description": "Более 50 миллионов человек используют бесплатное расширение для Chrome, блокирующее ВСЮ назойливую рекламу, вредоносное ПО и трекеры",
+               "icons": {
+                  "128": "icons/detailed/abp-128.png",
+                  "16": "icons/abp-16.png",
+                  "32": "icons/abp-32.png",
+                  "48": "icons/detailed/abp-48.png",
+                  "64": "icons/detailed/abp-64.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCxGWIIBRUVzQIXITqE6+js1FA24fsZC58G0fxcO1Duwfps+9gip5tedTziErKEpeAQVkgasdT4kk+b6Lw27yp3oysAj6zD9j+j4W+EMArTXqMIc6SMYD7Z8bPcwPb3tC1MUxMSpO6oOVpFE23UhKe91SYnrK92nHI2cmsor5elXQIDAQAB",
+               "manifest_version": 2,
+               "minimum_chrome_version": "28.0",
+               "name": "Adblock Plus",
+               "options_page": "options.html",
+               "permissions": [ "tabs", "http://*/*", "https://*/*", "contextMenus", "webRequest", "webRequestBlocking", "webNavigation", "unlimitedStorage", "notifications" ],
+               "short_name": "Adblock Plus",
+               "update_url": "https://clients2.google.com/service/update2/crx",
+               "version": "1.8.12",
+               "web_accessible_resources": [ "block.html" ]
+            },
+            "path": "cfhdojbkjhnklbpkdaibdccddilifddb/1.8.12_0",
+            "preferences": {
+
+            },
+            "regular_only_preferences": {
+
+            },
+            "state": 1,
+            "was_installed_by_default": false,
+            "was_installed_by_oem": false
+         },
+         "dbepggeogbaibhgnhhndojpepiihcmeb": {
+            "active_permissions": {
+               "api": [ "bookmarks", "clipboardRead", "history", "notifications", "sessions", "storage", "tabs", "webNavigation" ],
+               "explicit_host": [ "\u003Call_urls>", "chrome://favicon/*" ],
+               "manifest_permissions": [  ],
+               "scriptable_host": [ "\u003Call_urls>", "file:///", "file:///*/" ]
+            },
+            "commands": {
+
+            },
+            "content_settings": [  ],
+            "creation_flags": 9,
+            "events": [  ],
+            "extension_can_script_all_urls": true,
+            "from_bookmark": false,
+            "from_webstore": true,
+            "granted_permissions": {
+               "api": [ "bookmarks", "clipboardRead", "history", "notifications", "sessions", "storage", "tabs", "webNavigation" ],
+               "explicit_host": [ "\u003Call_urls>", "chrome://favicon/*" ],
+               "manifest_permissions": [  ],
+               "scriptable_host": [ "\u003Call_urls>", "file:///", "file:///*/" ]
+            },
+            "incognito_content_settings": [  ],
+            "incognito_preferences": {
+
+            },
+            "initial_keybindings_set": true,
+            "install_time": "13075294090804384",
+            "lastpingday": "13075898440786871",
+            "location": 1,
+            "manifest": {
+               "background": {
+                  "scripts": [ "lib/utils.js", "background_scripts/commands.js", "lib/clipboard.js", "background_scripts/sync.js", "background_scripts/settings.js", "background_scripts/exclusions.js", "background_scripts/completion.js", "background_scripts/marks.js", "background_scripts/main.js" ]
+               },
+               "browser_action": {
+                  "default_icon": "icons/browser_action_disabled.png",
+                  "default_popup": "pages/popup.html"
+               },
+               "content_scripts": [ {
+                  "all_frames": true,
+                  "css": [ "content_scripts/vimium.css" ],
+                  "js": [ "lib/utils.js", "lib/keyboard_utils.js", "lib/dom_utils.js", "lib/rect.js", "lib/handler_stack.js", "lib/clipboard.js", "content_scripts/ui_component.js", "content_scripts/link_hints.js", "content_scripts/vomnibar.js", "content_scripts/scroller.js", "content_scripts/marks.js", "content_scripts/mode.js", "content_scripts/mode_insert.js", "content_scripts/mode_passkeys.js", "content_scripts/mode_find.js", "content_scripts/mode_visual_edit.js", "content_scripts/vimium_frontend.js" ],
+                  "matches": [ "\u003Call_urls>" ],
+                  "run_at": "document_start"
+               }, {
+                  "all_frames": true,
+                  "css": [ "content_scripts/file_urls.css" ],
+                  "matches": [ "file:///", "file:///*/" ],
+                  "run_at": "document_start"
+               } ],
+               "description": "The Hacker's Browser. Vimium provides keyboard shortcuts for navigation and control in the spirit of Vim.",
+               "icons": {
+                  "128": "icons/icon128.png",
+                  "16": "icons/icon16.png",
+                  "48": "icons/icon48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCavizCZ9EnBGbtcRmMErcaxD2WUHJ9ME8IYGQhUBlFgIvchJjAO8koyak3AM95dqu3sOLdtIYD+75T82V1Wl5fLnHAeij2/IWL2VViTHeZhXZl1+rD9sRDaEYd7aZetpJ29+XXfhVphKArCCfwbYCtoJhTIr6S6DYsXuRevoV0EwIDAQAB",
+               "manifest_version": 2,
+               "name": "Vimium",
+               "options_page": "pages/options.html",
+               "permissions": [ "tabs", "bookmarks", "history", "clipboardRead", "storage", "sessions", "notifications", "webNavigation", "\u003Call_urls>" ],
+               "update_url": "https://clients2.google.com/service/update2/crx",
+               "version": "1.51",
+               "web_accessible_resources": [ "pages/vomnibar.html", "content_scripts/vimium.css" ]
+            },
+            "path": "dbepggeogbaibhgnhhndojpepiihcmeb/1.51_0",
+            "preferences": {
+
+            },
+            "regular_only_preferences": {
+
+            },
+            "state": 1,
+            "was_installed_by_default": false,
+            "was_installed_by_oem": false
+         },
+         "eemcgdkfndhakfknompkggombfjjjeno": {
+            "active_permissions": {
+               "api": [ "bookmarks", "bookmarkManagerPrivate", "metricsPrivate", "systemPrivate", "tabs" ],
+               "explicit_host": [ "chrome://favicon/*", "chrome://resources/*" ],
+               "manifest_permissions": [  ]
+            },
+            "commands": {
+
+            },
+            "content_settings": [  ],
+            "creation_flags": 1,
+            "events": [  ],
+            "from_bookmark": false,
+            "from_webstore": false,
+            "incognito_content_settings": [  ],
+            "incognito_preferences": {
+
+            },
+            "initial_keybindings_set": true,
+            "install_time": "13057808305354182",
+            "location": 5,
+            "manifest": {
+               "chrome_url_overrides": {
+                  "bookmarks": "main.html"
+               },
+               "content_security_policy": "object-src 'none'; script-src chrome://resources 'self'",
+               "description": "Bookmark Manager",
+               "icons": {
+
+               },
+               "incognito": "split",
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDQcByy+eN9jzazWF/DPn7NW47sW7lgmpk6eKc0BQM18q8hvEM3zNm2n7HkJv/R6fU+X5mtqkDuKvq5skF6qqUF4oEyaleWDFhd1xFwV7JV+/DU7bZ00w2+6gzqsabkerFpoP33ZRIw7OviJenP0c0uWqDWF8EGSyMhB3txqhOtiQIDAQAB",
+               "manifest_version": 2,
+               "name": "Bookmark Manager",
+               "permissions": [ "bookmarks", "bookmarkManagerPrivate", "metricsPrivate", "systemPrivate", "tabs", "chrome://favicon/", "chrome://resources/" ],
+               "version": "0.1"
+            },
+            "path": "/usr/lib/chromium/resources/bookmark_manager",
+            "preferences": {
+
+            },
+            "regular_only_preferences": {
+
+            },
+            "state": 1,
+            "was_installed_by_default": false,
+            "was_installed_by_oem": false
+         },
+         "ennkphjdgehloodpbhlhldgbnhmacadg": {
+            "active_permissions": {
+               "api": [  ],
+               "explicit_host": [ "chrome://settings-frame/*" ],
+               "manifest_permissions": [  ]
+            },
+            "commands": {
+
+            },
+            "content_settings": [  ],
+            "creation_flags": 1,
+            "events": [ "app.runtime.onLaunched" ],
+            "from_bookmark": false,
+            "from_webstore": false,
+            "incognito_content_settings": [  ],
+            "incognito_preferences": {
+
+            },
+            "initial_keybindings_set": true,
+            "install_time": "13057808305383074",
+            "location": 5,
+            "manifest": {
+               "app": {
+                  "background": {
+                     "scripts": [ "settings_app.js" ]
+                  }
+               },
+               "description": "Settings",
+               "display_in_launcher": false,
+               "icons": {
+                  "128": "settings_app_icon_128.png",
+                  "16": "settings_app_icon_16.png",
+                  "32": "settings_app_icon_32.png",
+                  "48": "settings_app_icon_48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDoVDPGX6fvKPVVgc+gnkYlGqHuuapgFDyKhsy4z7UzRLO/95zXPv8h8e5EacqbAQJLUbP6DERH5jowyNEYVxq9GJyntJMwP1ejvoz/52hnY3CCGGCmttmKzzpp5zwLuq3iZf8bslwywfflNUYtaCFSDa0TtrBZz0aOPrAAd/AhNwIDAQAB",
+               "manifest_version": 2,
+               "name": "Settings",
+               "permissions": [ "chrome://settings-frame/" ],
+               "version": "0.2"
+            },
+            "path": "/usr/lib/chromium/resources/settings_app",
+            "preferences": {
+
+            },
+            "regular_only_preferences": {
+
+            },
+            "running": false,
+            "state": 1,
+            "was_installed_by_default": false,
+            "was_installed_by_oem": false
+         },
+         "kmendfapggjehodndflmmgagdbamhnfd": {
+            "active_permissions": {
+               "api": [ "cryptotokenPrivate", "externally_connectable.all_urls", "hid", "tabs", "u2fDevices", "usb", {
+                  "usbDevices": [ {
+                     "interfaceId": -1,
+                     "productId": 529,
+                     "vendorId": 4176
+                  } ]
+               }, "webConnectable" ],
+               "explicit_host": [ "http://*/*", "https://*/*", "https://www.gstatic.com/*" ],
+               "manifest_permissions": [  ]
+            },
+            "commands": {
+
+            },
+            "content_settings": [  ],
+            "creation_flags": 1,
+            "events": [ "runtime.onConnectExternal", "runtime.onMessageExternal" ],
+            "from_bookmark": false,
+            "from_webstore": false,
+            "incognito_content_settings": [  ],
+            "incognito_preferences": {
+
+            },
+            "initial_keybindings_set": true,
+            "install_time": "13074698376647156",
+            "location": 5,
+            "manifest": {
+               "background": {
+                  "persistent": false,
+                  "scripts": [ "util.js", "b64.js", "sha256.js", "countdown.js", "countdowntimer.js", "devicestatuscodes.js", "approvedorigins.js", "errorcodes.js", "gnubbycodetypes.js", "webrequest.js", "gnubbymsgtypes.js", "messagetypes.js", "factoryregistry.js", "closeable.js", "requesthelper.js", "webrequestsender.js", "enroller.js", "requestqueue.js", "signer.js", "origincheck.js", "textfetcher.js", "appid.js", "watchdog.js", "cryptotokenorigincheck.js", "cryptotokenapprovedorigins.js", "gnubbydevice.js", "hidgnubbydevice.js", "usbgnubbydevice.js", "gnubbies.js", "gnubby.js", "gnubby-u2f.js", "gnubbyfactory.js", "singlesigner.js", "multiplesigner.js", "generichelper.js", "inherits.js", "individualattest.js", "devicefactoryregistry.js", "usbhelper.js", "usbenrollhandler.js", "usbsignhandler.js", "usbgnubbyfactory.js", "googlecorpindividualattest.js", "cryptotokenbackground.js" ]
+               },
+               "description": "CryptoToken Component Extension",
+               "externally_connectable": {
+                  "accepts_tls_channel_id": true,
+                  "ids": [ "fjajfjhkeibgmiggdfehjplbhmfkialk" ],
+                  "matches": [ "\u003Call_urls>" ]
+               },
+               "incognito": "split",
+               "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq7zRobvA+AVlvNqkHSSVhh1sEWsHSqz4oR/XptkDe/Cz3+gW9ZGumZ20NCHjaac8j1iiesdigp8B1LJsd/2WWv2Dbnto4f8GrQ5MVphKyQ9WJHwejEHN2K4vzrTcwaXqv5BSTXwxlxS/mXCmXskTfryKTLuYrcHEWK8fCHb+0gvr8b/kvsi75A1aMmb6nUnFJvETmCkOCPNX5CHTdy634Ts/x0fLhRuPlahk63rdf7agxQv5viVjQFk+tbgv6aa9kdSd11Js/RZ9yZjrFgHOBWgP4jTBqud4+HUglrzu8qynFipyNRLCZsaxhm+NItTyNgesxLdxZcwOz56KD1Q4IQIDAQAB",
+               "manifest_version": 2,
+               "name": "CryptoTokenExtension",
+               "permissions": [ "hid", "usb", "cryptotokenPrivate", "externally_connectable.all_urls", "tabs", "u2fDevices", "https://*/*", "http://*/*", {
+                  "usbDevices": [ {
+                     "productId": 529,
+                     "vendorId": 4176
+                  } ]
+               } ],
+               "version": "0.9.20"
+            },
+            "path": "/usr/lib/chromium/resources/cryptotoken",
+            "preferences": {
+
+            },
+            "regular_only_preferences": {
+
+            },
+            "state": 1,
+            "was_installed_by_default": false,
+            "was_installed_by_oem": false
+         },
+         "meffiamonaniekghongncpepaaecfoki": {
+            "active_permissions": {
+               "api": [ "cookies", "idle", "notifications", "tabs" ],
+               "explicit_host": [ "http://*.mail.ru/*", "http://*/*", "https://*/*" ],
+               "manifest_permissions": [  ]
+            },
+            "commands": {
+
+            },
+            "content_settings": [  ],
+            "creation_flags": 9,
+            "events": [  ],
+            "extension_can_script_all_urls": true,
+            "from_bookmark": false,
+            "from_webstore": true,
+            "granted_permissions": {
+               "api": [ "cookies", "idle", "notifications", "tabs" ],
+               "explicit_host": [ "http://*.mail.ru/*", "http://*/*", "https://*/*" ],
+               "manifest_permissions": [  ]
+            },
+            "incognito_content_settings": [  ],
+            "incognito_preferences": {
+
+            },
+            "initial_keybindings_set": true,
+            "install_time": "13064791217390838",
+            "lastpingday": "13075898440786871",
+            "location": 1,
+            "manifest": {
+               "background": {
+                  "page": "background.html"
+               },
+               "browser_action": {
+                  "default_icon": "img/ico_panel.png",
+                  "default_title": "Mail.ru Checker"
+               },
+               "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+               "description": "Отображение количества непрочитанных сообщений в почтовом ящике Mail.ru",
+               "icons": {
+                  "128": "img/128_activ.png",
+                  "16": "img/16_activ.png",
+                  "48": "img/48_activ.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQChunr+JouN5ZxeSXitfGJIDPGIuShpiu9ze+6BaPW7CIbIkUvoWBRlDUXVU7Rui46A0zqXRZoMGocRzYew9jOgTPSAQr2S4/VS0cOjpi8l00S1aPPOV4esOB4dXmb9J8nA4txggG+Vxgec3+IQgDe4JfjGUQz9/gHSiP8gJS/MFwIDAQAB",
+               "manifest_version": 2,
+               "name": "Mail.ru Checker",
+               "options_page": "options.html",
+               "permissions": [ "tabs", "idle", "notifications", "http://*.mail.ru/", "cookies", "http://*/*", "https://*/*" ],
+               "update_url": "https://clients2.google.com/service/update2/crx",
+               "version": "3.3.6"
+            },
+            "path": "meffiamonaniekghongncpepaaecfoki/3.3.6_0",
+            "preferences": {
+
+            },
+            "regular_only_preferences": {
+
+            },
+            "state": 1,
+            "was_installed_by_default": false,
+            "was_installed_by_oem": false
+         },
+         "mfehgcgbbipciphmccgaenjidiccnmng": {
+            "active_permissions": {
+               "api": [ "cloudPrintPrivate" ],
+               "manifest_permissions": [  ]
+            },
+            "commands": {
+
+            },
+            "content_settings": [  ],
+            "creation_flags": 1,
+            "events": [  ],
+            "from_bookmark": false,
+            "from_webstore": false,
+            "incognito_content_settings": [  ],
+            "incognito_preferences": {
+
+            },
+            "install_time": "13057808305379560",
+            "location": 5,
+            "manifest": {
+               "app": {
+                  "launch": {
+                     "web_url": "https://www.google.com/cloudprint"
+                  },
+                  "urls": [ "https://www.google.com/cloudprint/enable_chrome_connector" ]
+               },
+               "description": "Cloud Print",
+               "display_in_launcher": false,
+               "icons": {
+
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDqOhnwk4+HXVfGyaNsAQdU/js1Na56diW08oF1MhZiwzSnJsEaeuMN9od9q9N4ZdK3o1xXOSARrYdE+syV7Dl31nf6qz3A6K+D5NHe6sSB9yvYlIiN37jdWdrfxxE0pRYEVYZNTe3bzq3NkcYJlOdt1UPcpJB+isXpAGUKUvt7EQIDAQAB",
+               "name": "Cloud Print",
+               "permissions": [ "cloudPrintPrivate" ],
+               "version": "0.1"
+            },
+            "path": "/usr/lib/chromium/resources/cloud_print",
+            "preferences": {
+
+            },
+            "regular_only_preferences": {
+
+            },
+            "state": 1,
+            "was_installed_by_default": false,
+            "was_installed_by_oem": false
+         },
+         "mgndgikekgjfcpckkfioiadnlibdjbkf": {
+            "active_permissions": {
+               "api": [  ],
+               "manifest_permissions": [  ]
+            },
+            "app_launcher_ordinal": "n",
+            "commands": {
+
+            },
+            "content_settings": [  ],
+            "creation_flags": 1,
+            "events": [  ],
+            "from_bookmark": false,
+            "from_webstore": false,
+            "incognito_content_settings": [  ],
+            "incognito_preferences": {
+
+            },
+            "install_time": "13057808305381884",
+            "location": 5,
+            "manifest": {
+               "app": {
+                  "launch": {
+                     "web_url": "http://THIS-WILL-BE-REPLACED"
+                  }
+               },
+               "description": "A fast, simple, and secure web browser, built for the modern web.",
+               "display_in_launcher": true,
+               "display_in_new_tab_page": false,
+               "icons": {
+                  "128": "product_logo_128.png",
+                  "16": "product_logo_16.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNuYLEQ1QPMcc5HfWI/9jiEf6FdJWqEtgRmIeI7qtjPLBM5oje+Ny2E2mTAhou5qdJiO2CHWdU1DQXY2F7Zu2gZaKZgHLfK4WimHxUT5Xd9/aro/R9PCzjguM1BLusiWYc9xlj1IsZpyiN1hcjU7SCnBhv1feQlv2WSB5KRiXwhQIDAQAB",
+               "name": "Chromium",
+               "version": "0.1"
+            },
+            "page_ordinal": "n",
+            "path": "/usr/lib/chromium/resources/chrome_app",
+            "preferences": {
+
+            },
+            "regular_only_preferences": {
+
+            },
+            "state": 1,
+            "was_installed_by_default": false,
+            "was_installed_by_oem": false
+         },
+         "mhjfbmdgcfjbbpaeojofohoefgiehjai": {
+            "active_permissions": {
+               "api": [  ],
+               "explicit_host": [ "\u003Call_urls>", "chrome://favicon/*" ],
+               "manifest_permissions": [  ],
+               "scriptable_host": [ "chrome://print/*" ]
+            },
+            "commands": {
+
+            },
+            "content_settings": [  ],
+            "creation_flags": 1,
+            "events": [  ],
+            "from_bookmark": false,
+            "from_webstore": false,
+            "incognito_content_settings": [  ],
+            "incognito_preferences": {
+
+            },
+            "initial_keybindings_set": true,
+            "install_time": "13074698376646255",
+            "location": 5,
+            "manifest": {
+               "content_scripts": [ {
+                  "js": [ "content_script.js" ],
+                  "matches": [ "chrome://print/*" ]
+               } ],
+               "content_security_policy": "script-src 'self' chrome://resources; object-src *; plugin-types application/x-google-chrome-pdf",
+               "description": "",
+               "incognito": "split",
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDN6hM0rsDYGbzQPQfOygqlRtQgKUXMfnSjhIBL7LnReAVBEd7ZmKtyN2qmSasMl4HZpMhVe2rPWVVwBDl6iyNE/Kok6E6v6V3vCLGsOpQAuuNVye/3QxzIldzG/jQAdWZiyXReRVapOhZtLjGfywCvlWq7Sl/e3sbc0vWybSDI2QIDAQAB",
+               "manifest_version": 2,
+               "mime_types": [ "application/pdf" ],
+               "mime_types_handler": "index.html",
+               "name": "Chromium PDF Viewer",
+               "offline_enabled": true,
+               "permissions": [ "\u003Call_urls>" ],
+               "version": "1",
+               "web_accessible_resources": [ "index.html", "index.html" ]
+            },
+            "path": "/usr/lib/chromium/resources/pdf",
+            "preferences": {
+
+            },
+            "regular_only_preferences": {
+
+            },
+            "state": 1,
+            "was_installed_by_default": false,
+            "was_installed_by_oem": false
+         },
+         "nmmhkkegccagdldgiimedpiccmgmieda": {
+            "ack_external": true,
+            "active_permissions": {
+               "api": [ "identity", "webview" ],
+               "explicit_host": [ "https://wallet-web.sandbox.google.com/*", "https://wallet.google.com/*", "https://www.google.com/*", "https://www.googleapis.com/*" ],
+               "manifest_permissions": [  ]
+            },
+            "commands": {
+
+            },
+            "content_settings": [  ],
+            "creation_flags": 137,
+            "events": [ "app.runtime.onLaunched", "runtime.onConnectExternal" ],
+            "from_bookmark": false,
+            "from_webstore": true,
+            "granted_permissions": {
+               "api": [ "identity", "webview" ],
+               "explicit_host": [ "https://wallet-web.sandbox.google.com/*", "https://wallet.google.com/*", "https://www.google.com/*", "https://www.googleapis.com/*" ],
+               "manifest_permissions": [  ]
+            },
+            "incognito_content_settings": [  ],
+            "incognito_preferences": {
+
+            },
+            "initial_keybindings_set": true,
+            "install_time": "13074697866729876",
+            "lastpingday": "13075898440786871",
+            "location": 10,
+            "manifest": {
+               "app": {
+                  "background": {
+                     "scripts": [ "craw_background.js" ]
+                  }
+               },
+               "current_locale": "ru",
+               "default_locale": "en",
+               "description": "Google Кошелек для цифровых товаров",
+               "display_in_launcher": false,
+               "display_in_new_tab_page": false,
+               "icons": {
+                  "128": "images/icon_128.png",
+                  "16": "images/icon_16.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrKfMnLqViEyokd1wk57FxJtW2XXpGXzIHBzv9vQI/01UsuP0IV5/lj0wx7zJ/xcibUgDeIxobvv9XD+zO1MdjMWuqJFcKuSS4Suqkje6u+pMrTSGOSHq1bmBVh0kpToN8YoJs/P/yrRd7FEtAXTaFTGxQL4C385MeXSjaQfiRiQIDAQAB",
+               "manifest_version": 2,
+               "minimum_chrome_version": "29",
+               "name": "Google Кошелек",
+               "oauth2": {
+                  "auto_approve": true,
+                  "client_id": "203784468217.apps.googleusercontent.com",
+                  "scopes": [ "https://www.googleapis.com/auth/sierra", "https://www.googleapis.com/auth/sierrasandbox", "https://www.googleapis.com/auth/chromewebstore", "https://www.googleapis.com/auth/chromewebstore.readonly" ]
+               },
+               "permissions": [ "identity", "webview", "https://wallet.google.com/", "https://wallet-web.sandbox.google.com/", "https://www.google.com/", "https://www.googleapis.com/*" ],
+               "update_url": "https://clients2.google.com/service/update2/crx",
+               "version": "0.1.0.0"
+            },
+            "path": "nmmhkkegccagdldgiimedpiccmgmieda/0.1.0.0_0",
+            "preferences": {
+
+            },
+            "regular_only_preferences": {
+
+            },
+            "running": false,
+            "state": 1,
+            "was_installed_by_default": true,
+            "was_installed_by_oem": false
+         },
+         "pafkbggdmjlpgkdkcbjmhmfcdpncadgh": {
+            "active_permissions": {
+               "api": [ "alarms", "gcm", "identity", "metricsPrivate", "notifications", "storage", "tabs", "webstorePrivate" ],
+               "explicit_host": [ "*://*.google.com/*", "*://*.gstatic.com/*", "https://*.googleapis.com/*", "https://*.googleusercontent.com/*" ],
+               "manifest_permissions": [  ]
+            },
+            "commands": {
+
+            },
+            "content_settings": [  ],
+            "creation_flags": 1,
+            "events": [ "alarms.onAlarm", "gcm.onMessage", "identity.onSignInChanged", "notifications.onButtonClicked", "notifications.onClicked", "notifications.onClosed", "notifications.onPermissionLevelChanged", "notifications.onShowSettings", "pushMessaging.onMessage", "runtime.onInstalled", "runtime.onStartup", "runtime.onSuspend", "storage.onChanged" ],
+            "from_bookmark": false,
+            "from_webstore": false,
+            "incognito_content_settings": [  ],
+            "incognito_preferences": {
+
+            },
+            "initial_keybindings_set": true,
+            "install_time": "13057808305384232",
+            "location": 5,
+            "manifest": {
+               "background": {
+                  "persistent": false,
+                  "scripts": [ "utility.js", "cards.js", "background.js" ]
+               },
+               "description": "Integrates Google Now into Chrome.",
+               "icons": {
+                  "128": "images/icon128.png",
+                  "16": "images/icon16.png",
+                  "48": "images/icon48.png"
+               },
+               "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkhqJr32OFD/bMXW4Md7jMfd7LbwHXVc6x5bBQG5U+dloofoxrICDR20yur/40mQ8O//0sS1b8srvbab1CRlSrxoNCr9T80NAkfzx0gHyVS+p1Zow+1FzLMu9PiGwwFyN80HIB7GI/dIa0wC9K/2OrrzcHEhVH96DacTtWQqjfDVtZPjT7Xwv23dgoWcpbkRC86jMJot3dmX9xnn0KzoVc9gDOHSIkBLbkkr6Sp3LGXCCM4L0DJgxdFwaLr5WBzgC3y5x0/wwPIwN4PtIaK3BhH6njlksfnKwwIJ9iRT41V4BqbWu4mszO/7VJ3HJyw2DBpIc2grU9ZRRxrV3fRQG4wIDAQAB",
+               "manifest_version": 2,
+               "name": "Google Now",
+               "oauth2": {
+                  "auto_approve": true,
+                  "scopes": [ "https://www.googleapis.com/auth/googlenow" ]
+               },
+               "optional_permissions": [ "background" ],
+               "permissions": [ "alarms", "identity", "metricsPrivate", "notifications", "pushMessaging", "storage", "tabs", "webstorePrivate", "*://*.google.com/*", "*://*.gstatic.com/*", "https://*.googleapis.com/chromenow/v1/*", "https://*.googleusercontent.com/*" ],
+               "version": "1.2.0.1"
+            },
+            "path": "/usr/lib/chromium/resources/google_now",
+            "preferences": {
+
+            },
+            "regular_only_preferences": {
+
+            },
+            "state": 1,
+            "was_installed_by_default": false,
+            "was_installed_by_oem": false
+         }
+      },
+      "theme": {
+         "id": "",
+         "use_system": false
+      },
+      "toolbar": [ "meffiamonaniekghongncpepaaecfoki", "cfhdojbkjhnklbpkdaibdccddilifddb", "dbepggeogbaibhgnhhndojpepiihcmeb" ]
+   },
+   "gcm": {
+      "check_time": "13075906594260542"
+   },
+   "http_original_content_length": "61131052",
+   "http_received_content_length": "61131052",
+   "intl": {
+      "accept_languages": "en-US,en"
+   },
+   "invalidator": {
+      "client_id": "UxFUWZD8TsLS66gCBxJwQQ=="
+   },
+   "media": {
+      "device_id_salt": "DCWv28s0MF5B/YY0RyJwiA=="
+   },
+   "net": {
+      "http_server_properties": {
+         "servers": {
+            "accounts.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "ad.doubleclick.net:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.02,
+                  "protocol_str": "quic"
+               }
+            },
+            "ajax.googleapis.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "ajax.googleapis.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "analytics.twitter.com:443": {
+               "supports_spdy": true
+            },
+            "android.clients.google.com:443": {
+               "supports_spdy": true
+            },
+            "animalwrath.wordpress.com:443": {
+               "supports_spdy": true
+            },
+            "api.facebook.com:443": {
+               "supports_spdy": true
+            },
+            "api.vk.com:443": {
+               "supports_spdy": true
+            },
+            "apis.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "bid.g.doubleclick.net:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "bits.wikimedia.org:443": {
+               "supports_spdy": true
+            },
+            "books.google.ru:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "by.uservoice.com:443": {
+               "supports_spdy": true
+            },
+            "cache.pack.google.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "chrome.google.com:443": {
+               "supports_spdy": true
+            },
+            "clients1.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "clients2.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "clients2.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "clients4.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "cm.g.doubleclick.net:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "cm.g.doubleclick.net:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "code.google.com:443": {
+               "supports_spdy": true
+            },
+            "content.googleapis.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "contextweb.pixel.invitemedia.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "cse.google.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "csi.gstatic.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "csi.gstatic.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.02,
+                  "protocol_str": "quic"
+               }
+            },
+            "developer.android.com:443": {
+               "supports_spdy": true
+            },
+            "docs.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "easylist-downloads.adblockplus.org:443": {
+               "supports_spdy": true
+            },
+            "encrypted-tbn0.gstatic.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "encrypted-tbn1.gstatic.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "encrypted-tbn2.gstatic.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "encrypted-tbn3.gstatic.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "fbcdn-profile-a.akamaihd.net:443": {
+               "supports_spdy": true
+            },
+            "fbstatic-a.akamaihd.net:443": {
+               "supports_spdy": true
+            },
+            "fonts.googleapis.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "fonts.googleapis.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "fonts.gstatic.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "fonts.gstatic.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "gdata.youtube.com:443": {
+               "supports_spdy": true
+            },
+            "googleads.g.doubleclick.net:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "googleads.g.doubleclick.net:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "googleads4.g.doubleclick.net:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.02,
+                  "protocol_str": "quic"
+               }
+            },
+            "graph.facebook.com:443": {
+               "supports_spdy": true
+            },
+            "gravatar.com:443": {
+               "supports_spdy": true
+            },
+            "groups.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "i.creativecommons.org:443": {
+               "supports_spdy": true
+            },
+            "i.ytimg.com:443": {
+               "supports_spdy": true
+            },
+            "i.ytimg.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "i0.wp.com:443": {
+               "supports_spdy": true
+            },
+            "id.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "id.google.ru:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "lh3.ggpht.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "lh3.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "lh4.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "lh5.ggpht.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "lh5.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "lh6.ggpht.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "lh6.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "licensebuttons.net:443": {
+               "supports_spdy": true
+            },
+            "login.vk.com:443": {
+               "supports_spdy": true
+            },
+            "login.wikimedia.org:443": {
+               "supports_spdy": true
+            },
+            "lqo-thequestionsnetw.netdna-ssl.com:443": {
+               "supports_spdy": true
+            },
+            "m.addthis.com:443": {
+               "supports_spdy": true
+            },
+            "m.addthisedge.com:443": {
+               "supports_spdy": true
+            },
+            "maps.googleapis.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "maps.gstatic.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "meta.wikimedia.org:443": {
+               "supports_spdy": true
+            },
+            "mt0.googleapis.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.002,
+                  "protocol_str": "quic"
+               }
+            },
+            "mt1.googleapis.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.002,
+                  "protocol_str": "quic"
+               }
+            },
+            "oauth.googleusercontent.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "pagead2.googlesyndication.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "pagead2.googlesyndication.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "plus.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "pp.vk.me:443": {
+               "supports_spdy": true
+            },
+            "public-api.wordpress.com:443": {
+               "supports_spdy": true
+            },
+            "r2---sn-u3u-axqe.c.pack.google.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.01,
+                  "protocol_str": "quic"
+               }
+            },
+            "r3---sn-u3u-axqe.c.pack.google.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.01,
+                  "protocol_str": "quic"
+               }
+            },
+            "r4---sn-gxuog0-axqe.c.pack.google.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "r6---sn-n8v7lnee.googlevideo.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "ru.wikipedia.org:443": {
+               "supports_spdy": true
+            },
+            "s.youtube.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "s.ytimg.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 0.02,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "s.ytimg.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "s0.2mdn.net:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.02,
+                  "protocol_str": "quic"
+               }
+            },
+            "s7.addthis.com:443": {
+               "supports_spdy": true
+            },
+            "secure.gravatar.com:443": {
+               "supports_spdy": true
+            },
+            "ssl.google-analytics.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "ssl.gstatic.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "stats.g.doubleclick.net:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "stats.g.doubleclick.net:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "stats.wp.com:443": {
+               "supports_spdy": true
+            },
+            "support.google.com:443": {
+               "supports_spdy": true
+            },
+            "syndication.twitter.com:443": {
+               "supports_spdy": true
+            },
+            "t0.gstatic.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.02,
+                  "protocol_str": "quic"
+               }
+            },
+            "t1.gstatic.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.02,
+                  "protocol_str": "quic"
+               }
+            },
+            "t2.gstatic.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.02,
+                  "protocol_str": "quic"
+               }
+            },
+            "t3.gstatic.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.002,
+                  "protocol_str": "quic"
+               }
+            },
+            "themes.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "tools.google.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.002,
+                  "protocol_str": "quic"
+               }
+            },
+            "tpc.googlesyndication.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "translate.google.com:443": {
+               "supports_spdy": true
+            },
+            "translate.google.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "translate.google.ru:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "translate.googleapis.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "upload.wikimedia.org:443": {
+               "supports_spdy": true
+            },
+            "vk.com:443": {
+               "supports_spdy": true
+            },
+            "www.dropbox.com:443": {
+               "supports_spdy": true
+            },
+            "www.facebook.com:443": {
+               "supports_spdy": true
+            },
+            "www.google-analytics.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "www.google-analytics.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "www.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "www.google.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "www.google.ru:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "www.google.ru:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "www.googleadservices.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "www.googletagmanager.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "www.googletagmanager.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "www.googletagservices.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "www.gstatic.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "www.gstatic.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 0.02,
+                  "protocol_str": "quic"
+               }
+            },
+            "www.wikidata.org:443": {
+               "supports_spdy": true
+            },
+            "www.youtube-nocookie.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 0.02,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "www.youtube.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "www.youtube.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "www.zndsk.com:443": {
+               "supports_spdy": true
+            }
+         },
+         "version": 3
+      }
+   },
+   "partition": {
+      "per_host_zoom_levels": {
+         "0": {
+            "file:///home/igorjan/0970": 8.827469119589406,
+            "file:///home/igorjan/temp/icon.bmp": 8.827469119589406,
+            "forum.ixbt.com": 3.8017840169239308,
+            "get.adobe.com": 3.069389038663465,
+            "wiki.archlinux.org": 1.2239010857415449,
+            "www.x.org": 1.2239010857415449
+         }
+      }
+   },
+   "pinned_tabs": [  ],
+   "plugins": {
+      "plugins_list": [  ],
+      "removed_old_component_pepper_flash_settings": true
+   },
+   "profile": {
+      "avatar_index": 26,
+      "content_settings": {
+         "clear_on_exit_migrated": true,
+         "pattern_pairs": {
+            "http://games.apitech.ru:80,*": {
+               "media-stream-camera": 2,
+               "media-stream-mic": 2
+            },
+            "https://support.skype.com:443,https://support.skype.com:443": {
+               "ssl-cert-decisions": {
+                  "cert_exceptions_map": {
+                     "4294967095laqRIH9N+21ruaYI4KwCQAYMLe9g5Il8nJJwizsl7sE=": 1
+                  },
+                  "guid": "3317E793-5BE0-4AD7-94D6-A53FB5C9D56E",
+                  "version": 1
+               }
+            },
+            "https://www.google.ru:443,https://www.google.ru:443": {
+               "ssl-cert-decisions": {
+                  "cert_exceptions_map": {
+                     "4294967095vXSAASM7e8ONnb8u4Z1pGdiBSyNQqXAK3p/JpXFdpck=": 1
+                  },
+                  "guid": "3317E793-5BE0-4AD7-94D6-A53FB5C9D56E",
+                  "version": 1
+               }
+            }
+         },
+         "pref_version": 1
+      },
+      "created_by_version": "38.0.2125.101",
+      "exit_type": "Normal",
+      "exited_cleanly": true,
+      "local_profile_id": 10156356,
+      "managed_user_id": "",
+      "name": "First user",
+      "per_host_zoom_levels": {
+
+      }
+   },
+   "protection": {
+      "macs": {
+         "browser": {
+            "show_home_button": "7E99030D80842F6B31CFF7A701F51FDDE0C2D401D249ABEA6B2AE80DCC1EA5BA"
+         },
+         "default_search_provider": {
+            "keyword": "42142BFC0323D5EF138C9ED2128F1DEB2FD3E3F7AF30AD930F60A1C5B87E5276",
+            "name": "D29ED831358AACE7408781A9A65FA083D8CBA1662ED7E0356AEB94734C60D047",
+            "search_url": "D02C7D9E52A3893EB51633C2C0CA63BB6AC27B4E406A7C47D6A896AF4042FDDE"
+         },
+         "default_search_provider_data": {
+            "template_url_data": "575D258E47F940C6887685ABA99A5839CBFE4BA30863349DFE0D0C375AAB8816"
+         },
+         "extensions": {
+            "settings": {
+               "ahfgeienlihckogmohjhadlkjgocpleb": "D9DCF9F5C76B7BD9F8F82EF5357DA0F79BECE3B9103DA3030E409DAA15DF7A6D",
+               "bepbmhgboaologfdajaanbcjmnhjmhfn": "8A21763201BA02BE4B6B57D100F2D16A45163FAF614511683823AC03AC93A582",
+               "cfhdojbkjhnklbpkdaibdccddilifddb": "F749ECF940FBF70F3BAA07230C76EEEAF1F3BC81802290012F2D5EABC5468FC2",
+               "dbepggeogbaibhgnhhndojpepiihcmeb": "BAB4B5D16550958546D174DFAC2B96A51AF10866C2BF97F64F0622AAE6DE0F3B",
+               "eemcgdkfndhakfknompkggombfjjjeno": "AD4506A0488B478DD1A4FA51E2456262773D8B34DDDB30B59988259A8520ED3C",
+               "ennkphjdgehloodpbhlhldgbnhmacadg": "9FC0EB98A46065E8A003046219ADA0AB735FE71D719EB69CF752F7A280F602FC",
+               "kmendfapggjehodndflmmgagdbamhnfd": "D4BF206EEFE614FBC0553B1D456E6F6F76F39ECAFA9E64B4AB2BAC36F1C69784",
+               "meffiamonaniekghongncpepaaecfoki": "8C13AE204136E4429F27210D05C96A4CD1531894ABA1B0C80E1D4FD24C022342",
+               "mfehgcgbbipciphmccgaenjidiccnmng": "557B293BBD5F70DCEE63BAE4400EA5126E8C7CE27F6B98F0AB351C0503EE375C",
+               "mgndgikekgjfcpckkfioiadnlibdjbkf": "419B9CD36FBD09EEC6267B3BDDA4908581F82822973C74E829C64BD5339225A7",
+               "mhjfbmdgcfjbbpaeojofohoefgiehjai": "CE10D732D46DC8E19982E4516DC88875BCA34FA4F6D77410D0610B1FE8C99562",
+               "nmmhkkegccagdldgiimedpiccmgmieda": "094BE499A8F6AC2848C36E16FC5BBC3EFB3E002E9B71028514D6584298D7AFBC",
+               "pafkbggdmjlpgkdkcbjmhmfcdpncadgh": "EDED204A65DE1C838B39139616440DDEB3389A931EAB64AEBDFC2FDABA3CF5AC"
+            }
+         },
+         "google": {
+            "services": {
+               "last_username": "24FCEF9BF7DF12A2935BE143E58951E09DBAA1D3E0E24430C0FF93009F5D6AFD",
+               "username": "D26BCA1B2F99EDF1D42826D14541328D9E374F4559553FC3BB7E76405AC31AE2"
+            }
+         },
+         "homepage": "B1E9FE8108A84F532486D13AAC43C0AFDA16D3DFC9EB2F743AEE11F89F2F163E",
+         "homepage_is_newtabpage": "3680F776D17E3C099431BAF5381FAB9BCC0C2C70FEA4C74D12324BC94A207119",
+         "pinned_tabs": "699F1AC92729A024B80605AFC3C63BFB2A35B70C4214581BBE108F851528E9E8",
+         "prefs": {
+            "preference_reset_time": "95C909F3D0669D5931907B455F099C510E7770D9F0BA6FF13E4C76101B44F757"
+         },
+         "profile": {
+            "reset_prompt_memento": "D4530CB53DD89D7863C8A6CB3762FD06DE5DBC9965D16D3A72FE1B19AD4A6C8F"
+         },
+         "safebrowsing": {
+            "incidents_sent": "569707D9A4676B72F48BE92B740BE3EF895419C8A646F1AE1BA70BD9C3B41845"
+         },
+         "search_provider_overrides": "1E1EBA3A4DC28A23BEFCF6ED5D71CE71E9814DD587A305F6B14F72E834AF75DD",
+         "session": {
+            "restore_on_startup": "FF7E6D4A0C00443182E8326EE564F803943764462F88443412193C73C8E5046B",
+            "startup_urls": "8BB8DBC1D7CA5C58F821C38254FB2B9C874F8EE9B9905B57DE48C731C6C91837"
+         },
+         "sync": {
+            "remaining_rollback_tries": "330199A48C5F90321D74BF4A3B8CAD4B7FF7FA5817F414DCBE4E6C2F52FBDA56"
+         }
+      }
+   },
+   "savefile": {
+      "default_directory": "/home/igorjan/Downloads"
+   },
+   "session": {
+      "restore_on_startup": 1,
+      "restore_on_startup_migrated": true,
+      "startup_urls_migration_time": "13057808304669565"
+   },
+   "translate_accepted_count": {
+      "ru": 0
+   },
+   "translate_blocked_languages": [ "en" ],
+   "translate_denied_count": {
+      "ru": 2
+   },
+   "translate_last_denied_time": 1420317606251.614,
+   "translate_too_often_denied": true,
+   "translate_whitelists": {
+
+   }
+}
