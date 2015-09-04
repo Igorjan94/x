@@ -1,3 +1,8 @@
+export LANGUAGE=ru_RU.UTF-8
+export LANG=ru_RU.UTF-8
+export LC_ALL=ru_RU.UTF-8
+export CONSOLEFONT="cyr-sun16"
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -258,7 +263,7 @@ export GREP_COLOR="1;33"
 [[ -x $(whence -p most) ]] && export PAGER=$(whence -p most)
 
 # редактор по дефолту 
-export EDITOR=/usr/bin/vim
+export EDITOR=/bin/vim
 
 autoload zkbd
 [[ ! -f ${ZDOTDIR:-$HOME}/.zkbd/konsole-:0 ]] && zkbd
@@ -348,8 +353,8 @@ alias logh="grc head"
 # везде 
 alias -s txt=$PAGER
 alias -s py=python
-alias startPostgresqlServer="/usr/pgsql/bin/postgres -D /usr/pgsql/data"
-alias postgresStartDatabase="-u igorjan /usr/pgsql/bin/psql" 
+alias startPostgresqlServer="/usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data"
+alias postgresStartDatabase="sudo -u igorjan /usr/local/pgsql/bin/psql" 
 
 # в иксах 
 alias -s {png,gif,jpg,jpeg}=feh
@@ -384,10 +389,10 @@ alias -g NUL="> /dev/null 2>&1"
 
 
 # 
-# 
-alias halt="halt"
-alias reboot="reboot"
-alias gparted="gparted"
+# sudo 
+alias halt="sudo halt"
+alias reboot="sudo reboot"
+alias gparted="sudo gparted"
 
 # родной скрин 
 alias screen="screen -DR"
@@ -427,15 +432,21 @@ fi
 alias ls='ls --color=auto'
 alias l='ls -lhF --group-directories-first --color=auto'
 alias grep='grep --colour=auto'
+export PATH="/home/igorjan/206round/timetable:${PATH}"
+export PATH="/home/igorjan/206round/staff:${PATH}"
+export PATH="/home/igorjan/206round/vk:${PATH}"
+export PATH="/usr/local/pgsql/bin:${PATH}"
+export PATH="/usr/include/jsoncpp:${PATH}"
+
 
 alias h='htop'
-alias n='nethogs wlan0'
-alias io='iotop'
-alias update='yaourt -Syua'
+alias n='sudo nethogs wlan0'
+alias io='sudo iotop'
+alias update='sudo yaourt -Syua'
 alias scr='xfce4-screenshooter'
 alias pacman='sudo pacman'
 alias open='xdg-open'
-alias showdisk='fdisk -l'
+alias showdisk='sudo fdisk -l'
 alias :q='exit'
 alias :wq='exit'
 
@@ -445,9 +456,11 @@ zstyle ':completion:*:processes' command 'ps -au$USER'
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;32'
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 alias show_random_file_or_directory='ls | sed -n "$((RANDOM%$(ls | wc -l)+1))p"'
-alias v='/usr/bin/vim -p'
-alias vim='/usr/bin/vim -p'
-alias fuck='sudo \!\!'
+alias v='/bin/vim -p'
+alias vim='/bin/vim -p'
+alias fuck='sudo $(fc -ln -1)'
+alias x='sudo $(fc -ln -1)'
+alias блядь='sudo $(fc -ln -1)'
 
 toBackup() {cp "$1" "$1.backup"}
 fromBackup() {cp "$1.backup" "$1"}
@@ -458,6 +471,9 @@ command_not_found_handler () {
     printf "Иди нафиг, я не нашел $@\n"
     return $?
 }
-alias vrc='/usr/bin/vim ~/.vimrc'
-alias zrc='/usr/bin/vim ~/.zshrc'
+alias vrc='/bin/vim ~/.vimrc'
+alias zrc='/bin/vim ~/.zshrc'
+alias plugin='/bin/vim ~/.vim/bundle/codeforces.vim/autoload'
+alias toPlugin='cd ~/.vim/bundle/codeforces.vim'
+alias cf='cd ~/206round/CodeForce/'
 alias suka='sudo'
