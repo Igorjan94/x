@@ -45,6 +45,7 @@ Bundle       'powerman/vim-plugin-ruscmd'
 Bundle     'kien/rainbow_parentheses.vim'
 "Bundle                   'wting/rust.vim'
 Bundle          'idris-hackers/idris-vim'
+Bundle                   'matze/vim-move'
 
 set nocp
 filetype plugin on
@@ -993,3 +994,8 @@ set matchpairs+=<:>
 
 map <C-Right> w
 map <C-Left> b
+
+
+let g:move_key_modifier = 'C'
+map <A-down> <C-j>
+map <A-up> <C-k>
