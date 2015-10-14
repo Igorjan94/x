@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description
+
+    xmlns="http://openoffice.org/extensions/description/2006"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:dep="http://openoffice.org/extensions/description/2006">
+    <identifier value="com.sun.star.PDFImport-linux_x86_64" />
+
+    <dependencies>
+        <OpenOffice.org-minimal-version value="3.0" dep:name="OpenOffice.org 3.0"/>
+    </dependencies>
+
+    <registration>
+        <simple-license accept-by="admin" default-license-id="lic-en-US" suppress-if-required="true" >
+        <license-text xlink:href="registration/LICENSE_en-US" lang="en-US" license-id="lic-en-US"/>
+        <license-text xlink:href="registration/LICENSE_af" lang="af" license-id="lic-af"/>
+        <license-text xlink:href="registration/LICENSE_ar" lang="ar" license-id="lic-ar"/>
+        <license-text xlink:href="registration/LICENSE_as" lang="as" license-id="lic-as"/>
+        <license-text xlink:href="registration/LICENSE_ast" lang="ast" license-id="lic-ast"/>
+        <license-text xlink:href="registration/LICENSE_be-BY" lang="be-BY" license-id="lic-be-BY"/>
+        <license-text xlink:href="registration/LICENSE_bg" lang="bg" license-id="lic-bg"/>
+        <license-text xlink:href="registration/LICENSE_bn" lang="bn" license-id="lic-bn"/>
+        <license-text xlink:href="registration/LICENSE_bo" lang="bo" license-id="lic-bo"/>
+        <license-text xlink:href="registration/LICENSE_br" lang="br" license-id="lic-br"/>
+        <license-text xlink:href="registration/LICENSE_brx" lang="brx" license-id="lic-brx"/>
+        <license-text xlink:href="registration/LICENSE_bs" lang="bs" license-id="lic-bs"/>
+        <license-text xlink:href="registration/LICENSE_ca" lang="ca" license-id="lic-ca"/>
+        <license-text xlink:href="registration/LICENSE_ca-XV" lang="ca-XV" license-id="lic-ca-XV"/>
+        <license-text xlink:href="registration/LICENSE_cs" lang="cs" license-id="lic-cs"/>
+        <license-text xlink:href="registration/LICENSE_cy" lang="cy" license-id="lic-cy"/>
+        <license-text xlink:href="registration/LICENSE_da" lang="da" license-id="lic-da"/>
+        <license-text xlink:href="registration/LICENSE_de" lang="de" license-id="lic-de"/>
+        <license-text xlink:href="registration/LICENSE_dgo" lang="dgo" license-id="lic-dgo"/>
+        <license-text xlink:href="registration/LICENSE_dz" lang="dz" license-id="lic-dz"/>
+        <license-text xlink:href="registration/LICENSE_el" lang="el" license-id="lic-el"/>
+        <license-text xlink:href="registration/LICENSE_en-GB" lang="en-GB" license-id="lic-en-GB"/>
+        <license-text xlink:href="registration/LICENSE_en-ZA" lang="en-ZA" license-id="lic-en-ZA"/>
+        <license-text xlink:href="registration/LICENSE_eo" lang="eo" license-id="lic-eo"/>
+        <license-text xlink:href="registration/LICENSE_es" lang="es" license-id="lic-es"/>
+        <license-text xlink:href="registration/LICENSE_et" lang="et" license-id="lic-et"/>
+        <license-text xlink:href="registration/LICENSE_eu" lang="eu" license-id="lic-eu"/>
+        <license-text xlink:href="registration/LICENSE_fa" lang="fa" license-id="lic-fa"/>
+        <license-text xlink:href="registration/LICENSE_fi" lang="fi" license-id="lic-fi"/>
+        <license-text xlink:href="registration/LICENSE_fr" lang="fr" license-id="lic-fr"/>
+        <license-text xlink:href="registration/LICENSE_ga" lang="ga" license-id="lic-ga"/>
+        <license-text xlink:href="registration/LICENSE_gl" lang="gl" license-id="lic-gl"/>
+        <license-text xlink:href="registration/LICENSE_gu" lang="gu" license-id="lic-gu"/>
+        <license-text xlink:href="registration/LICENSE_he" lang="he" license-id="lic-he"/>
+        <license-text xlink:href="registration/LICENSE_hi" lang="hi" license-id="lic-hi"/>
+        <license-text xlink:href="registration/LICENSE_hr" lang="hr" license-id="lic-hr"/>
+        <license-text xlink:href="registration/LICENSE_hu" lang="hu" license-id="lic-hu"/>
+        <license-text xlink:href="registration/LICENSE_id" lang="id" license-id="lic-id"/>
+        <license-text xlink:href="registration/LICENSE_is" lang="is" license-id="lic-is"/>
+        <license-text xlink:href="registration/LICENSE_it" lang="it" license-id="lic-it"/>
+        <license-text xlink:href="registration/LICENSE_ja" lang="ja" license-id="lic-ja"/>
+        <license-text xlink:href="registration/LICENSE_ka" lang="ka" license-id="lic-ka"/>
+        <license-text xlink:href="registration/LICENSE_kid" lang="kid" license-id="lic-kid"/>
+        <license-text xlink:href="registration/LICENSE_kk" lang="kk" license-id="lic-kk"/>
+        <license-text xlink:href="registration/LICENSE_km" lang="km" license-id="lic-km"/>
+        <license-text xlink:href="registration/LICENSE_kn" lang="kn" license-id="lic-kn"/>
+        <license-text xlink:href="registration/LICENSE_ko" lang="ko" license-id="lic-ko"/>
+        <license-text xlink:href="registration/LICENSE_kok" lang="kok" license-id="lic-kok"/>
+        <license-text xlink:href="registration/LICENSE_ks" lang="ks" license-id="lic-ks"/>
+        <license-text xlink:href="registration/LICENSE_ku" lang="ku" license-id="lic-ku"/>
+        <license-text xlink:href="registration/LICENSE_lt" lang="lt" license-id="lic-lt"/>
+        <license-text xlink:href="registration/LICENSE_lv" lang="lv" license-id="lic-lv"/>
+        <license-text xlink:href="registration/LICENSE_mai" lang="mai" license-id="lic-mai"/>
+        <license-text xlink:href="registration/LICENSE_mk" lang="mk" license-id="lic-mk"/>
+        <license-text xlink:href="registration/LICENSE_ml" lang="ml" license-id="lic-ml"/>
+        <license-text xlink:href="registration/LICENSE_mn" lang="mn" license-id="lic-mn"/>
+        <license-text xlink:href="registration/LICENSE_mni" lang="mni" license-id="lic-mni"/>
+        <license-text xlink:href="registration/LICENSE_mr" lang="mr" license-id="lic-mr"/>
+        <license-text xlink:href="registration/LICENSE_my" lang="my" license-id="lic-my"/>
+        <license-text xlink:href="registration/LICENSE_nb" lang="nb" license-id="lic-nb"/>
+        <license-text xlink:href="registration/LICENSE_ne" lang="ne" license-id="lic-ne"/>
+        <license-text xlink:href="registration/LICENSE_nl" lang="nl" license-id="lic-nl"/>
+        <license-text xlink:href="registration/LICENSE_nn" lang="nn" license-id="lic-nn"/>
+        <license-text xlink:href="registration/LICENSE_nr" lang="nr" license-id="lic-nr"/>
+        <license-text xlink:href="registration/LICENSE_ns" lang="ns" license-id="lic-ns"/>
+        <license-text xlink:href="registration/LICENSE_oc" lang="oc" license-id="lic-oc"/>
+        <license-text xlink:href="registration/LICENSE_om" lang="om" license-id="lic-om"/>
+        <license-text xlink:href="registration/LICENSE_or" lang="or" license-id="lic-or"/>
+        <license-text xlink:href="registration/LICENSE_pa-IN" lang="pa-IN" license-id="lic-pa-IN"/>
+        <license-text xlink:href="registration/LICENSE_pap" lang="pap" license-id="lic-pap"/>
+        <license-text xlink:href="registration/LICENSE_pl" lang="pl" license-id="lic-pl"/>
+        <license-text xlink:href="registration/LICENSE_pt" lang="pt" license-id="lic-pt"/>
+        <license-text xlink:href="registration/LICENSE_pt-BR" lang="pt-BR" license-id="lic-pt-BR"/>
+        <license-text xlink:href="registration/LICENSE_ro" lang="ro" license-id="lic-ro"/>
+        <license-text xlink:href="registration/LICENSE_ru" lang="ru" license-id="lic-ru"/>
+        <license-text xlink:href="registration/LICENSE_rw" lang="rw" license-id="lic-rw"/>
+        <license-text xlink:href="registration/LICENSE_sa-IN" lang="sa-IN" license-id="lic-sa-IN"/>
+        <license-text xlink:href="registration/LICENSE_sat" lang="sat" license-id="lic-sat"/>
+        <license-text xlink:href="registration/LICENSE_sd" lang="sd" license-id="lic-sd"/>
+        <license-text xlink:href="registration/LICENSE_sh" lang="sh" license-id="lic-sh"/>
+        <license-text xlink:href="registration/LICENSE_si" lang="si" license-id="lic-si"/>
+        <license-text xlink:href="registration/LICENSE_sk" lang="sk" license-id="lic-sk"/>
+        <license-text xlink:href="registration/LICENSE_sl" lang="sl" license-id="lic-sl"/>
+        <license-text xlink:href="registration/LICENSE_sr" lang="sr" license-id="lic-sr"/>
+        <license-text xlink:href="registration/LICENSE_ss" lang="ss" license-id="lic-ss"/>
+        <license-text xlink:href="registration/LICENSE_st" lang="st" license-id="lic-st"/>
+        <license-text xlink:href="registration/LICENSE_sv" lang="sv" license-id="lic-sv"/>
+        <license-text xlink:href="registration/LICENSE_sw-TZ" lang="sw-TZ" license-id="lic-sw-TZ"/>
+        <license-text xlink:href="registration/LICENSE_ta" lang="ta" license-id="lic-ta"/>
+        <license-text xlink:href="registration/LICENSE_te" lang="te" license-id="lic-te"/>
+        <license-text xlink:href="registration/LICENSE_tg" lang="tg" license-id="lic-tg"/>
+        <license-text xlink:href="registration/LICENSE_th" lang="th" license-id="lic-th"/>
+        <license-text xlink:href="registration/LICENSE_tn" lang="tn" license-id="lic-tn"/>
+        <license-text xlink:href="registration/LICENSE_tr" lang="tr" license-id="lic-tr"/>
+        <license-text xlink:href="registration/LICENSE_ts" lang="ts" license-id="lic-ts"/>
+        <license-text xlink:href="registration/LICENSE_ug" lang="ug" license-id="lic-ug"/>
+        <license-text xlink:href="registration/LICENSE_uk" lang="uk" license-id="lic-uk"/>
+        <license-text xlink:href="registration/LICENSE_ur" lang="ur" license-id="lic-ur"/>
+        <license-text xlink:href="registration/LICENSE_uz" lang="uz" license-id="lic-uz"/>
+        <license-text xlink:href="registration/LICENSE_ve" lang="ve" license-id="lic-ve"/>
+        <license-text xlink:href="registration/LICENSE_vi" lang="vi" license-id="lic-vi"/>
+        <license-text xlink:href="registration/LICENSE_xh" lang="xh" license-id="lic-xh"/>
+        <license-text xlink:href="registration/LICENSE_zh-CN" lang="zh-CN" license-id="lic-zh-CN"/>
+        <license-text xlink:href="registration/LICENSE_zh-TW" lang="zh-TW" license-id="lic-zh-TW"/>
+        <license-text xlink:href="registration/LICENSE_zu" lang="zu" license-id="lic-zu"/>
+        </simple-license>
+    </registration>
+
+    <version value="1.0.4" />
+
+    <platform value="linux_x86_64" />
+
+    <publisher>
+        <name xlink:href="http://www.oracle.com/us/products/applications/open-office" lang="en">Oracle</name>
+    </publisher>
+
+    <display-name>
+        <name lang="en-US">PDF Import</name>
+    </display-name>
+    
+    <icon>
+      <default xlink:href="images/extension_32.png" />
+      <high-contrast xlink:href="images/extension_32_h.png" />
+    </icon>
+
+</description>

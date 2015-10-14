@@ -1,0 +1,17 @@
+2015/10/14-20:16:26.397 825 Reusing MANIFEST /home/igorjan/.config/chromium/Default/Local Extension Settings/cfhdojbkjhnklbpkdaibdccddilifddb/MANIFEST-000001
+2015/10/14-20:16:26.398 825 Recovering log #627
+2015/10/14-20:16:28.010 825 Level-0 table #630: started
+2015/10/14-20:16:28.289 825 Level-0 table #630: 2593599 bytes OK
+2015/10/14-20:16:28.533 825 Delete type=0 #627
+2015/10/14-21:17:24.049 2237 Level-0 table #633: started
+2015/10/14-21:17:24.210 2237 Level-0 table #633: 2594017 bytes OK
+2015/10/14-21:17:24.255 2237 Delete type=0 #631
+2015/10/14-21:17:24.257 2237 Compacting 4@0 + 1@1 files
+2015/10/14-21:17:24.423 2237 Generated table #634: 4 keys, 864698 bytes
+2015/10/14-21:17:24.423 2237 Compacted 4@0 + 1@1 files => 864698 bytes
+2015/10/14-21:17:24.489 2237 compacted to: files[ 0 1 1 0 0 0 0 ]
+2015/10/14-21:17:24.490 2237 Delete type=2 #625
+2015/10/14-21:17:24.490 2237 Delete type=2 #630
+2015/10/14-21:17:24.492 2237 Delete type=2 #628
+2015/10/14-21:17:24.492 2237 Delete type=2 #623
+2015/10/14-21:17:24.493 2237 Delete type=2 #633

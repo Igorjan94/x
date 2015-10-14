@@ -1,0 +1,34 @@
+[Default Applications]
+image/jpeg=eog.desktop
+application/gzip=7zFM.desktop
+application/octet-stream=mousepad.desktop
+image/png=eog.desktop
+text/html=opera-browser.desktop
+application/vnd.oasis.opendocument.text=libreoffice-writer.desktop
+application/msword=libreoffice-writer.desktop
+image/gif=eog.desktop
+application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
+application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop
+application/x-java-archive=userapp-java-2CQV2X.desktop
+
+[Added Associations]
+image/jpeg=eog.desktop;
+application/gzip=7zFM.desktop;
+application/octet-stream=mousepad.desktop;
+image/png=eog.desktop;
+text/html=opera-browser.desktop;
+application/vnd.oasis.opendocument.text=mousepad.desktop;libreoffice-writer.desktop;
+application/msword=evince.desktop;libreoffice-writer.desktop;
+image/gif=eog.desktop;
+application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop;
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop;
+application/x-java-archive=userapp-java-2CQV2X.desktop;userapp-java-TK1U1X.desktop;
+application/x-ms-dos-executable=wine.desktop;
+text/plain=mousepad.desktop;
+application/zip=xarchiver.desktop;
+application/json=mousepad.desktop;
+image/x-pcx=gimp.desktop;

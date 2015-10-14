@@ -1,0 +1,27 @@
+[colors]
+foreground = #00ff00
+background = #000000
+
+[options]
+browser = chromium
+geometry = 1020x560
+icon_name = utilities-terminal
+
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+scrollback_lines = 10000
+search_wrap = true
+
+cursor_blink = system
+
+# "block", "underline" or "ibeam"
+cursor_shape = block
+
+# emit escape sequences for other keys modified by Control
+modify_other_keys = false

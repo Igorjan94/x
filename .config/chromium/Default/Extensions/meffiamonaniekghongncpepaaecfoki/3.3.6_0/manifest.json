@@ -1,0 +1,23 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "img/ico_panel.png",
+      "default_title": "Mail.ru Checker"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Отображение количества непрочитанных сообщений в почтовом ящике Mail.ru",
+   "icons": {
+      "128": "img/128_activ.png",
+      "16": "img/16_activ.png",
+      "48": "img/48_activ.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQChunr+JouN5ZxeSXitfGJIDPGIuShpiu9ze+6BaPW7CIbIkUvoWBRlDUXVU7Rui46A0zqXRZoMGocRzYew9jOgTPSAQr2S4/VS0cOjpi8l00S1aPPOV4esOB4dXmb9J8nA4txggG+Vxgec3+IQgDe4JfjGUQz9/gHSiP8gJS/MFwIDAQAB",
+   "manifest_version": 2,
+   "name": "Mail.ru Checker",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "idle", "notifications", "http://*.mail.ru/", "cookies", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.3.6"
+}
