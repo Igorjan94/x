@@ -1,18 +1,18 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 
-set nocompatible
-filetype off 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 filetype plugin indent on
 
-Bundle         'Igorjan94/codeforces.vim'
+set nocompatible
+filetype off 
+"Bundle         'Igorjan94/codeforces.vim'
 "Bundle            'vim-scripts/dbext.vim'
 Bundle                   'kien/ctrlp.vim'
 Bundle               'Shougo/vimproc.vim'
 Bundle                'majutsushi/tagbar'
-Bundle           'Valloric/YouCompleteMe'
+"Bundle           'Valloric/YouCompleteMe'
 Bundle             'scrooloose/syntastic'
 "Bundle                 'travitch/hasksyn'
 "Bundle               'tpope/vim-surround'
@@ -48,6 +48,7 @@ Bundle          'idris-hackers/idris-vim'
 Bundle            'crusoexia/vim-monokai'
 Bundle          'pangloss/vim-javascript'
 Bundle     'crusoexia/vim-javascript-lib'
+Bundle                   'matze/vim-move'
 
 set nocp
 filetype plugin on
@@ -173,8 +174,8 @@ nnoremap <C-u> :UndotreeToggle<CR>
 imap <F5> <Esc> :tabprev<CR><leader>cd
 map <F5> :tabprev<CR><leader>cd
 nmap <leader>w :w!<cr>
-"map <F2> <Esc>:w !sudo tee %<CR>
 nmap <F2> <Esc>:w<CR>
+map <F2> <Esc>:w<CR>
 imap <F2> <Esc>:w<CR>
 imap <F6> <Esc> :tabnext<CR><leader>cd
 map <F6> :tabnext <CR><leader>cd
@@ -891,6 +892,8 @@ endif
 
                             nmap <F8> <ESC>:w<CR><ESC>:!./%<CR>
                             imap <F8> <ESC>:w<CR><ESC>:!./%<CR>
+autocmd FileType c          nmap <F8> <ESC>:w<CR><ESC>:!./%<<CR>
+autocmd FileType c          imap <F8> <ESC>:w<CR><ESC>:!./%<<CR>
 autocmd FileType cpp        nmap <F8> <ESC>:w<CR><ESC>:!./%<<CR>
 autocmd FileType cpp        imap <F8> <ESC>:w<CR><ESC>:!./%<<CR>
 autocmd FileType java       nmap <F8> <ESC>:w<CR><ESC>:!java %<<CR>
@@ -903,7 +906,6 @@ autocmd FileType python     imap <F8> <ESC>:w<CR><ESC>:!python3 %<CR>
 autocmd FileType cpp        imap <S-F8> <ESC>:w<CR><ESC>:!importer.py % /home/igorjan/206round/staff/library.h<CR>:e<CR>
 autocmd FileType cpp        nmap <S-F8> <ESC>:w<CR><ESC>:!importer.py % /home/igorjan/206round/staff/library.h<CR>:e<CR>
 
-
 imap <C-F9> <ESC>:w<CR><ESC>:make<CR>
 nmap <C-F9> <ESC>:w<CR><ESC>:make<CR>
 
@@ -915,11 +917,12 @@ nmap <F9> <ESC>:w<CR><ESC>:silent make<CR>:call feedkeys("\<F8>")<CR>
 autocmd FileType cpp        imap <F7> <ESC>:w<CR>:!clang++ -std=c++11 -E %<CR>
 autocmd FileType cpp        nmap <F7> <ESC>:w<CR>:!clang++ -std=c++11 -E %<CR>
 
-autocmd FileType cpp    imap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --break-blocks --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
-autocmd FileType java   imap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --break-blocks --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
+autocmd FileType cpp    imap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
+autocmd FileType java   imap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
 
-autocmd FileType cpp    nmap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --break-blocks --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
-autocmd FileType java   nmap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --break-blocks --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
+autocmd FileType c      nmap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
+autocmd FileType cpp    nmap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
+autocmd FileType java   nmap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
 
 " Ctrl-Space for completions. Heck Yeah!¬
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
@@ -940,14 +943,14 @@ let g:EclimJavaSearchSingleResult = 'tabnew'
 
 let g:undotree_SetFocusWhenToggle = 1
 
-let g:CodeForcesXUser = '11cd100a538070cb86d8cb465e79e80911af6f9ee823d98072ae7397c39f11ca958ed6876401eacb'
-let g:CodeForcesToken = '2bf7a4e060b8ea9782d37e7c67c7bd52'
-let g:CodeForcesJSessionId = 'E6A99FD85718FA2BB6686DC62E083F5B-n1'
-let g:CodeForcesUserAgent = 'Opera/9.80 (X11; Linux x86_64) Presto/2.12.388 Version/12.16'
-let g:CodeForces39ce7 = 'CFkWPSN0'
+let g:CodeForcesXUser = '642717cac5d479d313a7754312431fae3b9b30924d9e5d5db91f52b19ff886ecf8f2564a558a2fa9'
+let g:CodeForcesToken = '666836e8b6934e8032e283c7099490dc'
+let g:CodeForcesJSessionId = 'D0CF9D84992E9BAF33F93FD354A592F4-n1'
+let g:CodeForcesUserAgent = 'Mozilla/5.0 (X11; Linux x86_64; rv:37.0) Gecko/20100101 Firefox/37.0'
+let g:CodeForces39ce7 = 'CFtAi3yO'
 let g:CodeForcesUsername = 'Igorjan94'
 let g:CodeForcesCount = 42
-let g:CodeForcesContestId = 567
+let g:CodeForcesContestId = 544
 let g:CodeForcesShowUnofficial = '1'
 let g:CodeForcesCommandLoadTask = 'vsplit'
 let g:CodeForcesContestFormat = '/index'
@@ -959,6 +962,7 @@ noremap <leader>vv <ESC>:CodeForces
 noremap <C-B>   <ESC>:w<CR><ESC>:CodeForcesUserSubmissions<CR>
 noremap <C-S-B> <ESC>:w<CR><ESC>:CodeForcesSubmit<CR>
 
+autocmd FileType c    nnoremap <C-E> <ESC>:YcmCompleter GoToDefinitionElseDeclaration<CR>
 autocmd FileType cpp  nnoremap <C-E> <ESC>:YcmCompleter GoToDefinitionElseDeclaration<CR>
 autocmd FileType java nnoremap <C-E> <ESC>:JavaSearch<CR>
 
@@ -1002,3 +1006,7 @@ vmap  ,ci
 nmap  ,ci
 
 setlocal spell spelllang=en,ru
+
+let g:move_key_modifier = 'C'
+map <A-down> <C-j>
+map <A-up> <C-k>

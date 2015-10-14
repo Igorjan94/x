@@ -1,9 +1,7 @@
-# Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 bindkey -e
-# End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/igorjan/.zshrc'
 
@@ -11,10 +9,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 bindkey '\e[3~' delete-char # del
-bindkey '5D' backward-word #ctrl+left 
-bindkey '5C' forward-word #ctrl+right
-bindkey '2D' backward-word #shift+left 
-bindkey '2C' forward-word #shift+right
+bindkey ';5D' backward-word #ctrl+left 
+bindkey ';5C' forward-word #ctrl+right
+bindkey ';2D' backward-word #shift+left 
+bindkey ';2C' forward-word #shift+right
 
 [[ -n ${key[Home]}    ]]  && bindkey  "${key[Home]}"    beginning-of-line
 [[ -n ${key[End]}     ]]  && bindkey  "${key[End]}"     end-of-line
@@ -454,7 +452,7 @@ cat my_configs/2guys.txt
 alias show_random_file_or_directory='ls | sed -n "$((RANDOM%$(ls | wc -l)+1))p"'
 alias v='/usr/local/bin/vim -p'
 alias vim='/usr/local/bin/vim -p'
-alias fuck='sudo !!'
+alias x='sudo $(fc -ln -1)'
 
 toBackup() {cp "$1" "$1.backup"}
 fromBackup() {cp "$1.backup" "$1"}
