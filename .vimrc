@@ -45,6 +45,9 @@ Bundle       'powerman/vim-plugin-ruscmd'
 Bundle     'kien/rainbow_parentheses.vim'
 "Bundle                   'wting/rust.vim'
 Bundle          'idris-hackers/idris-vim'
+Bundle            'crusoexia/vim-monokai'
+Bundle          'pangloss/vim-javascript'
+Bundle     'crusoexia/vim-javascript-lib'
 
 set nocp
 filetype plugin on
@@ -170,7 +173,8 @@ nnoremap <C-u> :UndotreeToggle<CR>
 imap <F5> <Esc> :tabprev<CR><leader>cd
 map <F5> :tabprev<CR><leader>cd
 nmap <leader>w :w!<cr>
-map <F2> <Esc>:w !sudo tee %<CR>
+"map <F2> <Esc>:w !sudo tee %<CR>
+nmap <F2> <Esc>:w<CR>
 imap <F2> <Esc>:w<CR>
 imap <F6> <Esc> :tabnext<CR><leader>cd
 map <F6> :tabnext <CR><leader>cd
@@ -882,7 +886,7 @@ else
     autocmd FileType haskell    set makeprg=ghc\ -o\ %<\ %
     autocmd FileType python     set makeprg=echo\ Нажмите\ ENTER\ или\ введите\ команду\ для\ продолжения
     autocmd FileType c          set makeprg=clang\ -o\ %<\ %
-    autocmd FileType cpp        set makeprg=clang++\ -O2\ -std=c++11\ -I/home/igorjan/206round/staff\ -o\ %<\ %
+    autocmd FileType cpp        set makeprg=clang++\ -O2\ -std=c++11\ -I/home/igorjan/206round/staff\ -lpthread\ -o\ %<\ %
 endif
 
                             nmap <F8> <ESC>:w<CR><ESC>:!./%<CR>
@@ -895,6 +899,9 @@ autocmd FileType haskell    nmap <F8> <ESC>:w<CR><ESC>:!./%<<CR>
 autocmd FileType haskell    imap <F8> <ESC>:w<CR><ESC>:!./%<<CR>
 autocmd FileType python     nmap <F8> <ESC>:w<CR><ESC>:!python3 %<CR>
 autocmd FileType python     imap <F8> <ESC>:w<CR><ESC>:!python3 %<CR>
+
+autocmd FileType cpp        imap <S-F8> <ESC>:w<CR><ESC>:!importer.py % /home/igorjan/206round/staff/library.h<CR>:e<CR>
+autocmd FileType cpp        nmap <S-F8> <ESC>:w<CR><ESC>:!importer.py % /home/igorjan/206round/staff/library.h<CR>:e<CR>
 
 
 imap <C-F9> <ESC>:w<CR><ESC>:make<CR>
@@ -933,11 +940,14 @@ let g:EclimJavaSearchSingleResult = 'tabnew'
 
 let g:undotree_SetFocusWhenToggle = 1
 
-let g:CodeForcesXUser = 'cccb51221be8f35e972e26066e3c9beeeb1e5cab0830f8ecd3eb6aa6509b3c3c43b2126a3c2bf027'
-let g:CodeForcesToken = '2C80141B1512719211DF182889882F40'
+let g:CodeForcesXUser = '11cd100a538070cb86d8cb465e79e80911af6f9ee823d98072ae7397c39f11ca958ed6876401eacb'
+let g:CodeForcesToken = '2bf7a4e060b8ea9782d37e7c67c7bd52'
+let g:CodeForcesJSessionId = 'E6A99FD85718FA2BB6686DC62E083F5B-n1'
+let g:CodeForcesUserAgent = 'Opera/9.80 (X11; Linux x86_64) Presto/2.12.388 Version/12.16'
+let g:CodeForces39ce7 = 'CFkWPSN0'
 let g:CodeForcesUsername = 'Igorjan94'
 let g:CodeForcesCount = 42
-let g:CodeForcesContestId = 530
+let g:CodeForcesContestId = 567
 let g:CodeForcesShowUnofficial = '1'
 let g:CodeForcesCommandLoadTask = 'vsplit'
 let g:CodeForcesContestFormat = '/index'
@@ -986,3 +996,9 @@ set matchpairs+=<:>
 
 map <C-Right> w
 map <C-Left> b
+
+imap  <ESC>,cii
+vmap  ,ci
+nmap  ,ci
+
+setlocal spell spelllang=en,ru
