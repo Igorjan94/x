@@ -7,12 +7,13 @@ filetype plugin indent on
 
 set nocompatible
 filetype off 
-"Bundle         'Igorjan94/codeforces.vim'
+Bundle         'Igorjan94/codeforces.vim'
+Bundle     'terryma/vim-multiple-cursors'
 "Bundle            'vim-scripts/dbext.vim'
 Bundle                   'kien/ctrlp.vim'
 Bundle               'Shougo/vimproc.vim'
 Bundle                'majutsushi/tagbar'
-"Bundle           'Valloric/YouCompleteMe'
+Bundle           'Valloric/YouCompleteMe'
 Bundle             'scrooloose/syntastic'
 "Bundle                 'travitch/hasksyn'
 "Bundle               'tpope/vim-surround'
@@ -65,10 +66,10 @@ filetype plugin on
 filetype indent on
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-command WQ wq
-command Wq wq
-command W w
-command Q q
+command! WQ wq
+command! Wq wq
+command! W w
+command! Q q
 
 autocmd vimenter * cd %:p:h
 
@@ -153,7 +154,7 @@ nmap <F11> <Esc>:NERDTreeToggle<CR>
 set nu!
 set ai!
 set cin!
-imap <C-S-v> <S-Insert>
+"imap <C-S-v> <S-Insert>
 " Set to auto read when a file is changed from the outside
 set autoread
 
@@ -884,7 +885,7 @@ if filereadable("Makefile")
     set makeprg=make\ -s
 else
     autocmd FileType java       set makeprg=javac\ %
-    autocmd FileType haskell    set makeprg=ghc\ -o\ %<\ %
+    autocmd FileType haskell    set makeprg=ghc\ -o\ %<\ -O2\ %
     autocmd FileType python     set makeprg=echo\ Нажмите\ ENTER\ или\ введите\ команду\ для\ продолжения
     autocmd FileType c          set makeprg=clang\ -o\ %<\ %
     autocmd FileType cpp        set makeprg=clang++\ -O2\ -std=c++11\ -I/home/igorjan/206round/staff\ -lpthread\ -o\ %<\ %
@@ -914,8 +915,10 @@ nmap <F9> <ESC>:w<CR><ESC>:silent make<CR>:call feedkeys("\<F8>")<CR>
 
 "nmap <F7> <ESC>:w<CR><ESC>:!/usr/local/pgsql/bin/psql -U igorjan -d ctd -a -f %<CR>
 "imap <F7> <ESC>:w<CR><ESC>:!/usr/local/pgsql/bin/psql -U igorjan -d ctd -a -f %<CR>
-autocmd FileType cpp        imap <F7> <ESC>:w<CR>:!clang++ -std=c++11 -E %<CR>
-autocmd FileType cpp        nmap <F7> <ESC>:w<CR>:!clang++ -std=c++11 -E %<CR>
+"autocmd FileType cpp        imap <F7> <ESC>:w<CR>:!clang++ -std=c++11 -E %<CR>
+"autocmd FileType cpp        nmap <F7> <ESC>:w<CR>:!clang++ -std=c++11 -E %<CR>
+nmap <F7> <ESC>:w<CR><ESC>:!./compile-g++11.sh<CR>
+imap <F7> <ESC>:w<CR><ESC>:!./compile-g++11.sh<CR>
 
 autocmd FileType cpp    imap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
 autocmd FileType java   imap <C-f> <Esc>:w<CR><Esc>:%!astyle --mode=c --style=allman --indent=spaces=4 --indent-namespaces --align-pointer=middle --align-reference=type --suffix=none<CR><CR>
@@ -950,7 +953,7 @@ let g:CodeForcesUserAgent = 'Mozilla/5.0 (X11; Linux x86_64; rv:37.0) Gecko/2010
 let g:CodeForces39ce7 = 'CFtAi3yO'
 let g:CodeForcesUsername = 'Igorjan94'
 let g:CodeForcesCount = 42
-let g:CodeForcesContestId = 544
+let g:CodeForcesContestId = 635
 let g:CodeForcesShowUnofficial = '1'
 let g:CodeForcesCommandLoadTask = 'vsplit'
 let g:CodeForcesContestFormat = '/index'
@@ -968,7 +971,6 @@ autocmd FileType java nnoremap <C-E> <ESC>:JavaSearch<CR>
 
 set timeoutlen=2000
 
-imap <leader>{ {<CR><CR>}<ESC>k$i
 imap <leader>re readln();<ESC>hi
 imap <leader>wr writeln();<ESC>hi
 imap <leader>S System.out.println();<ESC>hi
@@ -981,13 +983,10 @@ imap <leader>mne min_element(
 imap <leader>mxe max_element(
 imap <leader>b begin(), 
 imap <leader>en end(), 
-imap <leader>f first
-imap <leader>se second
 imap <leader>so sort(whole(
 imap <leader>we writeln_range(
-imap <leader>[] []()<CR>{<CR>return<CR>};<ESC>kkk$i
 
-map <C-I><C-G><C-O><C-R> <ESC>:r /home/igorjan/206round/main.cpp<CR>
+map <C-C><C-C><C-C> <ESC>:r /home/igorjan/206round/main.cpp<CR>
 
 set foldenable
 set foldmethod=marker
@@ -1010,3 +1009,4 @@ setlocal spell spelllang=en,ru
 let g:move_key_modifier = 'C'
 map <A-down> <C-j>
 map <A-up> <C-k>
+
