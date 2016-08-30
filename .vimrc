@@ -1010,16 +1010,19 @@ let g:move_key_modifier = 'C'
 map <A-down> <C-j>
 map <A-up> <C-k>
 
-function! Magic(problem)
+function! Magic(problem, need)
 python << EOF
 import vim
 import re
-def getCode(problem):
+def getCode(problem, need):
     statement = re.sub(r'\".*?\"', '', re.sub(r'\'.*?\'', '', ''.join(open(problem + '.problem', 'r').readlines()).split('Входные данные', 1)[1].split('Выходные данные')[0]))
-    tempvariables = re.findall(r'([a-zA-Z][a-zA-Z]*(_[0-9]+)?)', statement)
-    variables = []
-    for (x, y) in tempvariables:
-        variables.append(x)
+    if need != 'LOL':
+        tempvariables = re.findall(r'([a-zA-Z][a-zA-Z]*(_[0-9]+)?)', statement)
+        variables = []
+        for (x, y) in tempvariables:
+            variables.append(x)
+    else:
+        variables = re.findall(r'[a-zA-Z]+', statement)
     vars = []
     for v in variables:
         if v != 'i' and v != 'j':
@@ -1053,9 +1056,9 @@ def getCode(problem):
             curr = 'string'
         for i in range(l):
             if variables[i] == variable:
-                if i + 1 < l and variables[i + 1] == 'i':
+                if i + 1 < l and variables[i + 1] == 'i' and len(re.findall(variable + '_i', statement)):
                     curr = 'vector<' + curr + '>'
-                    if i + 2 < l and variables[i + 2] == 'j':
+                    if i + 2 < l and variables[i + 2] == 'j' and len(re.findall(variable + '_i, j', statement)):
                         if j >= 1:
                             add = '(' + vars[j - 1] + ', ' + curr + '(' + vars[j] + '))'
                         curr = 'vector<' + curr + '>'
@@ -1063,7 +1066,7 @@ def getCode(problem):
                         if j != -1:
                             add = '(' + vars[j] + ')'
                     break
-                if i + 1 < l and variables[i + 1] == 'j':
+                if i + 1 < l and variables[i + 1] == 'j' and len(re.findall(variable + '_j', statement)):
                     curr = 'vector<' + curr + '>'
                     if j != -1:
                         add = '(' + vars[j] + ')'
@@ -1093,11 +1096,11 @@ def getCode(problem):
     return code.replace('_', '')
 
 (row, col) = vim.current.window.cursor
-code = getCode(vim.eval('a:problem')).split('\n')
+code = getCode(vim.eval('a:problem'), vim.eval('a:need')).split('\n')
 vim.current.buffer[:] = vim.current.buffer[:row] + code + vim.current.buffer[row:]
 vim.command(str(row + len(code)))
 EOF
 endfunction
 
-command! -nargs=1 LOL     call Magic(<q-args>)
-map <S-F7> :call Magic(expand('%<'))<CR>
+command! -nargs=+ LOL     call Magic(<f-args>)
+map <S-F7> :call Magic(expand('%<'), 'LOL')<CR>
