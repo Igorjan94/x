@@ -1010,3 +1010,94 @@ let g:move_key_modifier = 'C'
 map <A-down> <C-j>
 map <A-up> <C-k>
 
+function! Magic(problem)
+python << EOF
+import vim
+import re
+def getCode(problem):
+    statement = re.sub(r'\".*?\"', '', re.sub(r'\'.*?\'', '', ''.join(open(problem + '.problem', 'r').readlines()).split('Входные данные', 1)[1].split('Выходные данные')[0]))
+    tempvariables = re.findall(r'([a-zA-Z][a-zA-Z]*(_[0-9]+)?)', statement)
+    variables = []
+    for (x, y) in tempvariables:
+        variables.append(x)
+    vars = []
+    for v in variables:
+        if v != 'i' and v != 'j':
+            vars.append(v)
+
+    restrictions = re.findall(r'(\d+\s*[≤<≥>]\s*[^0-9]{1,10}\s+[≤<≥>]\s+\w+(\^\d+)?)', statement)
+    l = len(variables)
+    for i in range(len(restrictions)):
+        restrictions[i] = (restrictions[i][0], int('0' + restrictions[i][1][1:]))
+
+    def getPrevIndex(variable):
+        for j in range(l):
+            if vars[j] == variable:
+                if j > 0:
+                    return j - 1
+        return -1
+
+    def getDeclaration(variable):
+        j = getPrevIndex(variable)
+        mx = 0
+        for s in restrictions:
+            if s[0].find(variable) != -1:
+                mx = max(mx, s[1])
+        curr = 'int' if mx <= 9 else 'll'
+        add = ''
+
+        if len(re.findall(r'вещественных чисел ' + variable, statement)) or len(re.findall(r'вещественное число ' + variable, statement)):
+            curr = 'double'
+
+        if len(re.findall(r'строка? ' + variable, statement)):
+            curr = 'string'
+        for i in range(l):
+            if variables[i] == variable:
+                if i + 1 < l and variables[i + 1] == 'i':
+                    curr = 'vector<' + curr + '>'
+                    if i + 2 < l and variables[i + 2] == 'j':
+                        if j >= 1:
+                            add = '(' + vars[j - 1] + ', ' + curr + '(' + vars[j] + '))'
+                        curr = 'vector<' + curr + '>'
+                    else:
+                        if j != -1:
+                            add = '(' + vars[j] + ')'
+                    break
+                if i + 1 < l and variables[i + 1] == 'j':
+                    curr = 'vector<' + curr + '>'
+                    if j != -1:
+                        add = '(' + vars[j] + ')'
+                    break
+        return curr + ' ' + variable + add
+
+    code = ''
+    used = set()
+    ints = []
+
+    for i in range(l):
+        v = variables[i]
+        if v == 'i' or v == 'j' or v == 'ASCII' or v in used:
+            continue
+        used.add(v)
+        type = getDeclaration(v)
+        if type[:3] == 'int':
+            ints.append(v)
+        else:
+            if len(ints) > 0:
+                code += '\tints(' + ', '.join(ints) + ');\n'
+                ints = []
+            code += '\t' + type + ';\n'
+            code += '\treadln(' + v + ');\n'
+    if len(ints) > 0:
+        code += '\tints(' + ', '.join(ints) + ');\n'
+    return code.replace('_', '')
+
+(row, col) = vim.current.window.cursor
+code = getCode(vim.eval('a:problem')).split('\n')
+vim.current.buffer[:] = vim.current.buffer[:row] + code + vim.current.buffer[row:]
+vim.command(str(row + len(code)))
+EOF
+endfunction
+
+command! -nargs=1 LOL     call Magic(<q-args>)
+map <S-F7> :call Magic(expand('%<'))<CR>
