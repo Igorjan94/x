@@ -282,14 +282,6 @@ alias py='python'
 alias -s {png,gif,jpg,jpeg}=feh
 alias -s {pdf,djvu}=evince
 
-# без иксов 
-[[ -z $DISPLAY ]] && {
-	alias -s {odt,doc,sxw,xls,doc,rtf}=catdoc
-	alias -s {png,gif,jpg,jpeg}="fbi -a"
-	alias -s {pdf,djvu}=evince
-    setfont cyr-sun16
-}
-
 # html сам пусть соображает чё запускать 
 autoload -U pick-web-browser
 alias -s {html,htm}=pick-web-browser
@@ -369,6 +361,12 @@ alias zrc='/usr/bin/vim ~/.zshrc'
 alias pacman='sudo pacman'
 alias :q='exit'
 alias :wq='exit'
+
+enterDocker() {
+    docker exec -ti $1 zsh
+}
+
+alias enter=enterDocker
 
 command_not_found_handler () {
     printf "Иди нафиг, я не нашел $@\n"
